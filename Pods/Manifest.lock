@@ -1,0 +1,21 @@
+PODS:
+  - Base64nl (1.2)
+  - Masonry (1.0.2)
+  - OpenSSL-Universal (1.0.1.20)
+  - PXSourceList (2.0.7)
+
+DEPENDENCIES:
+  - Base64nl (~> 1.2)
+  - Masonry (~> 1.0.2)
+  - OpenSSL-Universal (~> 1.0.1.20)
+  - PXSourceList (~> 2.0.7)
+
+SPEC CHECKSUMS:
+  Base64nl: a497bdcd1c01ea793d36b399016195a8713c0e95
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  OpenSSL-Universal: 71f2c4b2ae758e2218090f905e95ca0ac5c01be7
+  PXSourceList: 8e37978a5db6c8d8d255f8913603bcea322c6445
+
+PODFILE CHECKSUM: 6be06f35eb2d096231867ecb3c7cd9b5eadd668c
+
+COCOAPODS: 1.2.1

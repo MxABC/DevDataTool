@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73378A651ED3E00E00F8E45F /* WorkingOnItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A631ED3E00E00F8E45F /* WorkingOnItViewController.m */; };
+		73378A661ED3E00E00F8E45F /* WorkingOnItViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73378A641ED3E00E00F8E45F /* WorkingOnItViewController.xib */; };
+		73378A6A1ED3E38D00F8E45F /* ConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A681ED3E38D00F8E45F /* ConvertViewController.m */; };
+		73378A6B1ED3E38D00F8E45F /* ConvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73378A691ED3E38D00F8E45F /* ConvertViewController.xib */; };
+		73378A731ED414BB00F8E45F /* LBXCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A6F1ED414BB00F8E45F /* LBXCertificate.m */; };
+		73378A741ED414BB00F8E45F /* LBXRSAVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A711ED414BB00F8E45F /* LBXRSAVendor.m */; };
+		73378A781ED41A4100F8E45F /* ParseCertifiationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A761ED41A4100F8E45F /* ParseCertifiationController.m */; };
+		73378A791ED41A4100F8E45F /* ParseCertifiationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73378A771ED41A4100F8E45F /* ParseCertifiationController.xib */; };
+		733FE4841EC982D100046FBA /* LBXBigNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 733FE4831EC982D100046FBA /* LBXBigNum.m */; };
+		7340FCEB1ED6FF83007A06AD /* HistortyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340FCEA1ED6FF83007A06AD /* HistortyData.m */; };
+		7340FCEE1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340FCED1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m */; };
+		734F45791EC2A05200C9E56B /* NSData+LBXHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45681EC2A05200C9E56B /* NSData+LBXHash.m */; };
+		734F457A1EC2A05200C9E56B /* NSString+LBXHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F456A1EC2A05200C9E56B /* NSString+LBXHash.m */; };
+		734F457B1EC2A05200C9E56B /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = 734F456C1EC2A05200C9E56B /* keccak.c */; };
+		734F457C1EC2A05200C9E56B /* NSData+SHA3.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F456F1EC2A05200C9E56B /* NSData+SHA3.m */; };
+		734F457D1EC2A05200C9E56B /* NSString+SHA3.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45711EC2A05200C9E56B /* NSString+SHA3.m */; };
+		734F457E1EC2A05200C9E56B /* sm3.c in Sources */ = {isa = PBXBuildFile; fileRef = 734F45731EC2A05200C9E56B /* sm3.c */; };
+		734F457F1EC2A05200C9E56B /* sm3_hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 734F45751EC2A05200C9E56B /* sm3_hmac.c */; };
+		734F45801EC2A05200C9E56B /* NSData+LBXCommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */; };
+		734F45831EC2A07400C9E56B /* NSData+LBXCypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45821EC2A07400C9E56B /* NSData+LBXCypt.m */; };
+		734F45861EC2C58300C9E56B /* NSData+LBXPadding.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45851EC2C58300C9E56B /* NSData+LBXPadding.m */; };
+		734F458A1EC3176600C9E56B /* CryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45881EC3176600C9E56B /* CryptViewController.m */; };
+		734F458B1EC3176600C9E56B /* CryptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 734F45891EC3176600C9E56B /* CryptViewController.xib */; };
+		735C24751EC4547100D604C8 /* NSData+LBXSM4.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C24741EC4547100D604C8 /* NSData+LBXSM4.m */; };
+		735C24781EC4571E00D604C8 /* sm4.c in Sources */ = {isa = PBXBuildFile; fileRef = 735C24761EC4571E00D604C8 /* sm4.c */; };
+		7385ABBF1E66934E001E74E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7385ABBE1E66934E001E74E1 /* main.m */; };
+		7385ABC11E66934E001E74E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7385ABC01E66934E001E74E1 /* Assets.xcassets */; };
+		739004121EC0224A00BBBF77 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739004111EC0224A00BBBF77 /* MainMenu.xib */; };
+		739004141EC0226400BBBF77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004131EC0226400BBBF77 /* AppDelegate.m */; };
+		739004191EC031A600BBBF77 /* Base64ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004171EC031A600BBBF77 /* Base64ViewController.m */; };
+		7390041A1EC031A600BBBF77 /* Base64ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739004181EC031A600BBBF77 /* Base64ViewController.xib */; };
+		739004251EC04DD100BBBF77 /* NSString+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004241EC04DD100BBBF77 /* NSString+LBXBase64.m */; };
+		739004301EC053B900BBBF77 /* HashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7390042E1EC053B900BBBF77 /* HashViewController.m */; };
+		739004311EC053B900BBBF77 /* HashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7390042F1EC053B900BBBF77 /* HashViewController.xib */; };
+		739004371EC05B6000BBBF77 /* NSData+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004341EC05B6000BBBF77 /* NSData+LBXConverter.m */; };
+		739004381EC05B6000BBBF77 /* NSString+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004361EC05B6000BBBF77 /* NSString+LBXConverter.m */; };
+		739004441EC0753500BBBF77 /* NSData+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004431EC0753500BBBF77 /* NSData+LBXBase64.m */; };
+		CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E61D1900E3DEA646B50B6D2 /* Pods-DataHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataHandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-DataHandler/Pods-DataHandler.release.xcconfig"; sourceTree = "<group>"; };
+		46812439FA6BE43515E3EA19 /* Pods-DataHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataHandler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DataHandler/Pods-DataHandler.debug.xcconfig"; sourceTree = "<group>"; };
+		5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DataHandler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73378A621ED3E00E00F8E45F /* WorkingOnItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkingOnItViewController.h; sourceTree = "<group>"; };
+		73378A631ED3E00E00F8E45F /* WorkingOnItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkingOnItViewController.m; sourceTree = "<group>"; };
+		73378A641ED3E00E00F8E45F /* WorkingOnItViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkingOnItViewController.xib; sourceTree = "<group>"; };
+		73378A671ED3E38D00F8E45F /* ConvertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertViewController.h; sourceTree = "<group>"; };
+		73378A681ED3E38D00F8E45F /* ConvertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertViewController.m; sourceTree = "<group>"; };
+		73378A691ED3E38D00F8E45F /* ConvertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConvertViewController.xib; sourceTree = "<group>"; };
+		73378A6E1ED414BB00F8E45F /* LBXCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXCertificate.h; sourceTree = "<group>"; };
+		73378A6F1ED414BB00F8E45F /* LBXCertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXCertificate.m; sourceTree = "<group>"; };
+		73378A701ED414BB00F8E45F /* LBXRSAVendor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXRSAVendor.h; sourceTree = "<group>"; };
+		73378A711ED414BB00F8E45F /* LBXRSAVendor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXRSAVendor.m; sourceTree = "<group>"; };
+		73378A751ED41A4100F8E45F /* ParseCertifiationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseCertifiationController.h; sourceTree = "<group>"; };
+		73378A761ED41A4100F8E45F /* ParseCertifiationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseCertifiationController.m; sourceTree = "<group>"; };
+		73378A771ED41A4100F8E45F /* ParseCertifiationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseCertifiationController.xib; sourceTree = "<group>"; };
+		733FE4821EC982D100046FBA /* LBXBigNum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXBigNum.h; sourceTree = "<group>"; };
+		733FE4831EC982D100046FBA /* LBXBigNum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXBigNum.m; sourceTree = "<group>"; };
+		7340FCE91ED6FF83007A06AD /* HistortyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistortyData.h; sourceTree = "<group>"; };
+		7340FCEA1ED6FF83007A06AD /* HistortyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistortyData.m; sourceTree = "<group>"; };
+		7340FCEC1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+LBXExtensions.h"; sourceTree = "<group>"; };
+		7340FCED1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+LBXExtensions.m"; sourceTree = "<group>"; };
+		734F45671EC2A05200C9E56B /* NSData+LBXHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXHash.h"; sourceTree = "<group>"; };
+		734F45681EC2A05200C9E56B /* NSData+LBXHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXHash.m"; sourceTree = "<group>"; };
+		734F45691EC2A05200C9E56B /* NSString+LBXHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXHash.h"; sourceTree = "<group>"; };
+		734F456A1EC2A05200C9E56B /* NSString+LBXHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXHash.m"; sourceTree = "<group>"; };
+		734F456C1EC2A05200C9E56B /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
+		734F456D1EC2A05200C9E56B /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
+		734F456E1EC2A05200C9E56B /* NSData+SHA3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SHA3.h"; sourceTree = "<group>"; };
+		734F456F1EC2A05200C9E56B /* NSData+SHA3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SHA3.m"; sourceTree = "<group>"; };
+		734F45701EC2A05200C9E56B /* NSString+SHA3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHA3.h"; sourceTree = "<group>"; };
+		734F45711EC2A05200C9E56B /* NSString+SHA3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHA3.m"; sourceTree = "<group>"; };
+		734F45731EC2A05200C9E56B /* sm3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm3.c; sourceTree = "<group>"; };
+		734F45741EC2A05200C9E56B /* sm3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm3.h; sourceTree = "<group>"; };
+		734F45751EC2A05200C9E56B /* sm3_hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm3_hmac.c; sourceTree = "<group>"; };
+		734F45761EC2A05200C9E56B /* NSData+LBXCommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXCommonCrypto.h"; sourceTree = "<group>"; };
+		734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXCommonCrypto.m"; sourceTree = "<group>"; };
+		734F45811EC2A07400C9E56B /* NSData+LBXCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXCrypt.h"; sourceTree = "<group>"; };
+		734F45821EC2A07400C9E56B /* NSData+LBXCypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXCypt.m"; sourceTree = "<group>"; };
+		734F45841EC2C58300C9E56B /* NSData+LBXPadding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXPadding.h"; sourceTree = "<group>"; };
+		734F45851EC2C58300C9E56B /* NSData+LBXPadding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXPadding.m"; sourceTree = "<group>"; };
+		734F45871EC3176600C9E56B /* CryptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptViewController.h; sourceTree = "<group>"; };
+		734F45881EC3176600C9E56B /* CryptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptViewController.m; sourceTree = "<group>"; };
+		734F45891EC3176600C9E56B /* CryptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CryptViewController.xib; sourceTree = "<group>"; };
+		735C24731EC4547100D604C8 /* NSData+LBXSM4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXSM4.h"; sourceTree = "<group>"; };
+		735C24741EC4547100D604C8 /* NSData+LBXSM4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXSM4.m"; sourceTree = "<group>"; };
+		735C24761EC4571E00D604C8 /* sm4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm4.c; sourceTree = "<group>"; };
+		735C24771EC4571E00D604C8 /* sm4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm4.h; sourceTree = "<group>"; };
+		735C247C1EC45BE300D604C8 /* LBXCrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXCrypt.h; sourceTree = "<group>"; };
+		7385ABB71E66934E001E74E1 /* DataHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7385ABBA1E66934E001E74E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7385ABBE1E66934E001E74E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7385ABC01E66934E001E74E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7385ABC51E66934E001E74E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		739004111EC0224A00BBBF77 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		739004131EC0226400BBBF77 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		739004161EC031A600BBBF77 /* Base64ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64ViewController.h; sourceTree = "<group>"; };
+		739004171EC031A600BBBF77 /* Base64ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64ViewController.m; sourceTree = "<group>"; };
+		739004181EC031A600BBBF77 /* Base64ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Base64ViewController.xib; sourceTree = "<group>"; };
+		739004231EC04DD100BBBF77 /* NSString+LBXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXBase64.h"; sourceTree = "<group>"; };
+		739004241EC04DD100BBBF77 /* NSString+LBXBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXBase64.m"; sourceTree = "<group>"; };
+		7390042D1EC053B900BBBF77 /* HashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashViewController.h; sourceTree = "<group>"; };
+		7390042E1EC053B900BBBF77 /* HashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashViewController.m; sourceTree = "<group>"; };
+		7390042F1EC053B900BBBF77 /* HashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HashViewController.xib; sourceTree = "<group>"; };
+		739004331EC05B6000BBBF77 /* NSData+LBXConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXConverter.h"; sourceTree = "<group>"; };
+		739004341EC05B6000BBBF77 /* NSData+LBXConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXConverter.m"; sourceTree = "<group>"; };
+		739004351EC05B6000BBBF77 /* NSString+LBXConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXConverter.h"; sourceTree = "<group>"; };
+		739004361EC05B6000BBBF77 /* NSString+LBXConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXConverter.m"; sourceTree = "<group>"; };
+		739004421EC0753500BBBF77 /* NSData+LBXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXBase64.h"; sourceTree = "<group>"; };
+		739004431EC0753500BBBF77 /* NSData+LBXBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXBase64.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7385ABB41E66934E001E74E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A7828BE00FAFE650E019A62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46812439FA6BE43515E3EA19 /* Pods-DataHandler.debug.xcconfig */,
+				3E61D1900E3DEA646B50B6D2 /* Pods-DataHandler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53D2F8C9BBB094FBBF7169F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73378A6C1ED414BB00F8E45F /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				73378A6E1ED414BB00F8E45F /* LBXCertificate.h */,
+				73378A6F1ED414BB00F8E45F /* LBXCertificate.m */,
+				73378A701ED414BB00F8E45F /* LBXRSAVendor.h */,
+				73378A711ED414BB00F8E45F /* LBXRSAVendor.m */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		733FE4811EC982BC00046FBA /* OpenSSL */ = {
+			isa = PBXGroup;
+			children = (
+				73378A6C1ED414BB00F8E45F /* RSA */,
+				733FE4821EC982D100046FBA /* LBXBigNum.h */,
+				733FE4831EC982D100046FBA /* LBXBigNum.m */,
+			);
+			path = OpenSSL;
+			sourceTree = "<group>";
+		};
+		7340FCE81ED6FF83007A06AD /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				7340FCEC1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.h */,
+				7340FCED1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m */,
+				7340FCE91ED6FF83007A06AD /* HistortyData.h */,
+				7340FCEA1ED6FF83007A06AD /* HistortyData.m */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		734F45611EC2A05200C9E56B /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				735C246F1EC4527E00D604C8 /* SM4 */,
+				734F45621EC2A05200C9E56B /* AES */,
+				734F45631EC2A05200C9E56B /* DES */,
+				734F45661EC2A05200C9E56B /* HASH */,
+				739004321EC05B5B00BBBF77 /* Transform */,
+				739004221EC04C4D00BBBF77 /* Base64 */,
+				734F45761EC2A05200C9E56B /* NSData+LBXCommonCrypto.h */,
+				734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */,
+				734F45811EC2A07400C9E56B /* NSData+LBXCrypt.h */,
+				734F45821EC2A07400C9E56B /* NSData+LBXCypt.m */,
+				734F45841EC2C58300C9E56B /* NSData+LBXPadding.h */,
+				734F45851EC2C58300C9E56B /* NSData+LBXPadding.m */,
+				735C247C1EC45BE300D604C8 /* LBXCrypt.h */,
+			);
+			path = Encrypt;
+			sourceTree = "<group>";
+		};
+		734F45621EC2A05200C9E56B /* AES */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AES;
+			sourceTree = "<group>";
+		};
+		734F45631EC2A05200C9E56B /* DES */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DES;
+			sourceTree = "<group>";
+		};
+		734F45661EC2A05200C9E56B /* HASH */ = {
+			isa = PBXGroup;
+			children = (
+				734F45671EC2A05200C9E56B /* NSData+LBXHash.h */,
+				734F45681EC2A05200C9E56B /* NSData+LBXHash.m */,
+				734F45691EC2A05200C9E56B /* NSString+LBXHash.h */,
+				734F456A1EC2A05200C9E56B /* NSString+LBXHash.m */,
+				734F456B1EC2A05200C9E56B /* SHA3 */,
+				734F45721EC2A05200C9E56B /* SM3 */,
+			);
+			path = HASH;
+			sourceTree = "<group>";
+		};
+		734F456B1EC2A05200C9E56B /* SHA3 */ = {
+			isa = PBXGroup;
+			children = (
+				734F456C1EC2A05200C9E56B /* keccak.c */,
+				734F456D1EC2A05200C9E56B /* keccak.h */,
+				734F456E1EC2A05200C9E56B /* NSData+SHA3.h */,
+				734F456F1EC2A05200C9E56B /* NSData+SHA3.m */,
+				734F45701EC2A05200C9E56B /* NSString+SHA3.h */,
+				734F45711EC2A05200C9E56B /* NSString+SHA3.m */,
+			);
+			path = SHA3;
+			sourceTree = "<group>";
+		};
+		734F45721EC2A05200C9E56B /* SM3 */ = {
+			isa = PBXGroup;
+			children = (
+				734F45731EC2A05200C9E56B /* sm3.c */,
+				734F45741EC2A05200C9E56B /* sm3.h */,
+				734F45751EC2A05200C9E56B /* sm3_hmac.c */,
+			);
+			path = SM3;
+			sourceTree = "<group>";
+		};
+		735C246F1EC4527E00D604C8 /* SM4 */ = {
+			isa = PBXGroup;
+			children = (
+				735C24761EC4571E00D604C8 /* sm4.c */,
+				735C24771EC4571E00D604C8 /* sm4.h */,
+				735C24731EC4547100D604C8 /* NSData+LBXSM4.h */,
+				735C24741EC4547100D604C8 /* NSData+LBXSM4.m */,
+			);
+			path = SM4;
+			sourceTree = "<group>";
+		};
+		7385ABAE1E66934E001E74E1 = {
+			isa = PBXGroup;
+			children = (
+				739004211EC04C4D00BBBF77 /* Model */,
+				739004151EC0318F00BBBF77 /* Controller */,
+				7385ABB91E66934E001E74E1 /* DataHandler */,
+				7385ABB81E66934E001E74E1 /* Products */,
+				0A7828BE00FAFE650E019A62 /* Pods */,
+				53D2F8C9BBB094FBBF7169F6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7385ABB81E66934E001E74E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7385ABB71E66934E001E74E1 /* DataHandler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7385ABB91E66934E001E74E1 /* DataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				7385ABBA1E66934E001E74E1 /* AppDelegate.h */,
+				739004131EC0226400BBBF77 /* AppDelegate.m */,
+				7385ABC01E66934E001E74E1 /* Assets.xcassets */,
+				739004111EC0224A00BBBF77 /* MainMenu.xib */,
+				7385ABC51E66934E001E74E1 /* Info.plist */,
+				7385ABBD1E66934E001E74E1 /* Supporting Files */,
+			);
+			path = DataHandler;
+			sourceTree = "<group>";
+		};
+		7385ABBD1E66934E001E74E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7385ABBE1E66934E001E74E1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		739004151EC0318F00BBBF77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7340FCE81ED6FF83007A06AD /* DataStore */,
+				739004161EC031A600BBBF77 /* Base64ViewController.h */,
+				739004171EC031A600BBBF77 /* Base64ViewController.m */,
+				739004181EC031A600BBBF77 /* Base64ViewController.xib */,
+				7390042D1EC053B900BBBF77 /* HashViewController.h */,
+				7390042E1EC053B900BBBF77 /* HashViewController.m */,
+				7390042F1EC053B900BBBF77 /* HashViewController.xib */,
+				734F45871EC3176600C9E56B /* CryptViewController.h */,
+				734F45881EC3176600C9E56B /* CryptViewController.m */,
+				734F45891EC3176600C9E56B /* CryptViewController.xib */,
+				73378A621ED3E00E00F8E45F /* WorkingOnItViewController.h */,
+				73378A631ED3E00E00F8E45F /* WorkingOnItViewController.m */,
+				73378A641ED3E00E00F8E45F /* WorkingOnItViewController.xib */,
+				73378A671ED3E38D00F8E45F /* ConvertViewController.h */,
+				73378A681ED3E38D00F8E45F /* ConvertViewController.m */,
+				73378A691ED3E38D00F8E45F /* ConvertViewController.xib */,
+				73378A751ED41A4100F8E45F /* ParseCertifiationController.h */,
+				73378A761ED41A4100F8E45F /* ParseCertifiationController.m */,
+				73378A771ED41A4100F8E45F /* ParseCertifiationController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		739004211EC04C4D00BBBF77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				733FE4811EC982BC00046FBA /* OpenSSL */,
+				734F45611EC2A05200C9E56B /* Encrypt */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		739004221EC04C4D00BBBF77 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				739004231EC04DD100BBBF77 /* NSString+LBXBase64.h */,
+				739004241EC04DD100BBBF77 /* NSString+LBXBase64.m */,
+				739004421EC0753500BBBF77 /* NSData+LBXBase64.h */,
+				739004431EC0753500BBBF77 /* NSData+LBXBase64.m */,
+			);
+			name = Base64;
+			path = ../Base64;
+			sourceTree = "<group>";
+		};
+		739004321EC05B5B00BBBF77 /* Transform */ = {
+			isa = PBXGroup;
+			children = (
+				739004331EC05B6000BBBF77 /* NSData+LBXConverter.h */,
+				739004341EC05B6000BBBF77 /* NSData+LBXConverter.m */,
+				739004351EC05B6000BBBF77 /* NSString+LBXConverter.h */,
+				739004361EC05B6000BBBF77 /* NSString+LBXConverter.m */,
+			);
+			name = Transform;
+			path = ../Transform;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7385ABB61E66934E001E74E1 /* DataHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7385ABC81E66934E001E74E1 /* Build configuration list for PBXNativeTarget "DataHandler" */;
+			buildPhases = (
+				FEB3DF583163271469F47B05 /* [CP] Check Pods Manifest.lock */,
+				7385ABB31E66934E001E74E1 /* Sources */,
+				7385ABB41E66934E001E74E1 /* Frameworks */,
+				7385ABB51E66934E001E74E1 /* Resources */,
+				AAE21F0EEC37DA943744242D /* [CP] Embed Pods Frameworks */,
+				01BCBAAEE85EE220F5B25935 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataHandler;
+			productName = DataHandler;
+			productReference = 7385ABB71E66934E001E74E1 /* DataHandler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7385ABAF1E66934E001E74E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LBX;
+				TargetAttributes = {
+					7385ABB61E66934E001E74E1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8LQ7CL73D8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7385ABB21E66934E001E74E1 /* Build configuration list for PBXProject "DataHandler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				English,
+			);
+			mainGroup = 7385ABAE1E66934E001E74E1;
+			productRefGroup = 7385ABB81E66934E001E74E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7385ABB61E66934E001E74E1 /* DataHandler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7385ABB51E66934E001E74E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				734F458B1EC3176600C9E56B /* CryptViewController.xib in Resources */,
+				73378A6B1ED3E38D00F8E45F /* ConvertViewController.xib in Resources */,
+				7385ABC11E66934E001E74E1 /* Assets.xcassets in Resources */,
+				739004121EC0224A00BBBF77 /* MainMenu.xib in Resources */,
+				739004311EC053B900BBBF77 /* HashViewController.xib in Resources */,
+				73378A791ED41A4100F8E45F /* ParseCertifiationController.xib in Resources */,
+				73378A661ED3E00E00F8E45F /* WorkingOnItViewController.xib in Resources */,
+				7390041A1EC031A600BBBF77 /* Base64ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01BCBAAEE85EE220F5B25935 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DataHandler/Pods-DataHandler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAE21F0EEC37DA943744242D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DataHandler/Pods-DataHandler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEB3DF583163271469F47B05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7385ABB31E66934E001E74E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73378A781ED41A4100F8E45F /* ParseCertifiationController.m in Sources */,
+				734F457C1EC2A05200C9E56B /* NSData+SHA3.m in Sources */,
+				735C24751EC4547100D604C8 /* NSData+LBXSM4.m in Sources */,
+				734F45831EC2A07400C9E56B /* NSData+LBXCypt.m in Sources */,
+				7385ABBF1E66934E001E74E1 /* main.m in Sources */,
+				734F457A1EC2A05200C9E56B /* NSString+LBXHash.m in Sources */,
+				734F458A1EC3176600C9E56B /* CryptViewController.m in Sources */,
+				739004251EC04DD100BBBF77 /* NSString+LBXBase64.m in Sources */,
+				734F45791EC2A05200C9E56B /* NSData+LBXHash.m in Sources */,
+				734F457F1EC2A05200C9E56B /* sm3_hmac.c in Sources */,
+				735C24781EC4571E00D604C8 /* sm4.c in Sources */,
+				734F457E1EC2A05200C9E56B /* sm3.c in Sources */,
+				734F45801EC2A05200C9E56B /* NSData+LBXCommonCrypto.m in Sources */,
+				7340FCEB1ED6FF83007A06AD /* HistortyData.m in Sources */,
+				734F45861EC2C58300C9E56B /* NSData+LBXPadding.m in Sources */,
+				734F457D1EC2A05200C9E56B /* NSString+SHA3.m in Sources */,
+				739004381EC05B6000BBBF77 /* NSString+LBXConverter.m in Sources */,
+				7340FCEE1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m in Sources */,
+				739004441EC0753500BBBF77 /* NSData+LBXBase64.m in Sources */,
+				73378A651ED3E00E00F8E45F /* WorkingOnItViewController.m in Sources */,
+				733FE4841EC982D100046FBA /* LBXBigNum.m in Sources */,
+				73378A6A1ED3E38D00F8E45F /* ConvertViewController.m in Sources */,
+				73378A741ED414BB00F8E45F /* LBXRSAVendor.m in Sources */,
+				734F457B1EC2A05200C9E56B /* keccak.c in Sources */,
+				739004371EC05B6000BBBF77 /* NSData+LBXConverter.m in Sources */,
+				73378A731ED414BB00F8E45F /* LBXCertificate.m in Sources */,
+				739004301EC053B900BBBF77 /* HashViewController.m in Sources */,
+				739004141EC0226400BBBF77 /* AppDelegate.m in Sources */,
+				739004191EC031A600BBBF77 /* Base64ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7385ABC61E66934E001E74E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7385ABC71E66934E001E74E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7385ABC91E66934E001E74E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46812439FA6BE43515E3EA19 /* Pods-DataHandler.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8LQ7CL73D8;
+				INFOPLIST_FILE = DataHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lbx.DataHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7385ABCA1E66934E001E74E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E61D1900E3DEA646B50B6D2 /* Pods-DataHandler.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8LQ7CL73D8;
+				INFOPLIST_FILE = DataHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lbx.DataHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7385ABB21E66934E001E74E1 /* Build configuration list for PBXProject "DataHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7385ABC61E66934E001E74E1 /* Debug */,
+				7385ABC71E66934E001E74E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7385ABC81E66934E001E74E1 /* Build configuration list for PBXNativeTarget "DataHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7385ABC91E66934E001E74E1 /* Debug */,
+				7385ABCA1E66934E001E74E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7385ABAF1E66934E001E74E1 /* Project object */;
+}
