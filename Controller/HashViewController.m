@@ -87,14 +87,14 @@
     
     NSString *srcString = _srcTextView.string;
 
-    NSData *dataString = [_srcTextView.string dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *srcData = [_srcTextView.string dataUsingEncoding:NSUTF8StringEncoding];
     if (_srcDataType.indexOfSelectedItem == 1) {
         
-        dataString = [srcString hexString2Data];
+        srcData = [srcString hexString2Data];
     }
     else if (_srcDataType.indexOfSelectedItem == 2)
     {
-        dataString = [srcString decodeBase64StringWithOptions:0];
+        srcData = [srcString decodeBase64StringWithOptions:0];
     }
     
     NSData *dst = nil;
@@ -102,39 +102,39 @@
     switch (_popHashType.indexOfSelectedItem) {
         case 0:
             //MD5
-            dst = [dataString md5];
+            dst = [srcData md5];
             break;
         case 1:
             //SHA1
-            dst = [dataString sha1];
+            dst = [srcData sha1];
             break;
         case 2:
             //SHA2-256
-            dst = [dataString sha2_256];
+            dst = [srcData sha2_256];
             break;
         case 3:
             //SHA2-384
-            dst = [dataString sha2_384];
+            dst = [srcData sha2_384];
             break;
         case 4:
             //SHA2-512
-            dst = [dataString sha2_512];
+            dst = [srcData sha2_512];
             break;
         case 5:
             //SHA3-256
-            dst = [dataString sha3:256];
+            dst = [srcData sha3:256];
             break;
         case 6:
             //SHA3-384
-            dst = [dataString sha3:384];
+            dst = [srcData sha3:384];
             break;
         case 7:
             //SHA3-512
-            dst = [dataString sha3:512];
+            dst = [srcData sha3:512];
             break;
         case 8:
             //SM3
-            dst = [dataString sm3];
+            dst = [srcData sm3];
             break;
             
         default:
