@@ -55,6 +55,60 @@
 
 @implementation NSData (LBXHash)
 
+
+/**
+ *  MD5,结果为16字节
+ *
+ *  @return md5
+ */
+- (NSData*)md5
+{
+   return  [self MD5Sum];
+}
+
+
+
+/**
+ *  SHA1,结果为20个字节
+ *
+ *  @return sha1
+ */
+- (NSData *)sha1;
+{
+    return [self SHA1Hash];
+}
+//
+/**
+ *  SHA256,结果为32个字节
+ *
+ *  @return sha256
+ */
+- (NSData*)sha2_256
+{
+    return [self SHA256Hash];
+}
+
+/**
+ *  SHA256,结果为48个字节
+ *
+ *  @return sha256
+ */
+- (NSData*)sha2_384
+{
+    return [self SHA384Hash];
+}
+
+/**
+ *  SHA256,结果为64个字节
+ *
+ *  @return sha512
+ */
+- (NSData*)sha2_512
+{
+    return [self SHA512Hash];
+}
+
+
 - (NSData*)sm3
 {
     uint8_t sm3_hashes[32] = {0};

@@ -29,6 +29,44 @@ typedef NS_ENUM(uint32_t,LBXHmacAlgorithm)
 @interface NSData (LBXHash)
 
 
+#pragma mark --散列算法
+
+/**
+ *  MD5,结果为16字节
+ *
+ *  @return md5
+ */
+- (NSData*)md5;
+
+/**
+ *  SHA1,结果为20个字节
+ *
+ *  @return sha1
+ */
+- (NSData *)sha1;
+
+/**
+ *  SHA256,结果为32个字节
+ *
+ *  @return sha256
+ */
+- (NSData*)sha2_256;
+
+/**
+ *  SHA256,结果为48个字节
+ *
+ *  @return sha256
+ */
+- (NSData*)sha2_384;
+
+/**
+ *  SHA256,结果为64个字节
+ *
+ *  @return sha512
+ */
+- (NSData*)sha2_512;
+
+
 
 /**
  sm3 hash，security equal to sha2_256
