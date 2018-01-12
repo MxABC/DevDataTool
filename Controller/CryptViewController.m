@@ -86,7 +86,7 @@
     [self chooseAlgorithmAction:nil];
     
     
-    _srcTextView.string = @"123456789";
+    _srcTextView.string = @"12345678";
     _cryptKeyTextView.string = @"12345678";
   
 }
@@ -420,6 +420,11 @@
 {
     NSData *srcData = [self dataFromSrcTextView];
     
+    if (!srcData) {
+        
+        return;
+    }
+    
     //ECB,CBC,CFB,...
     LBXOptionMode mode = [self optionMode];
     
@@ -443,21 +448,36 @@
     LBXAlgorithm alg = [self algorithmSelected];
     
     //调用
-    NSData *enData = [srcData LBXCryptWithOp:op algorithm:alg optionMode:mode padding:padding key:keyData iv:ivString error:nil];
+    NSError *error = nil;
+    NSData *enData = [srcData LBXCryptWithOp:op algorithm:alg optionMode:mode padding:padding key:keyData iv:ivString error:&error];
     
-
-    
-    switch (_dstDataType.indexOfSelectedItem) {
-        case 0:
-            //hex
-            _dstTextView.string = enData.hexString;
-            break;
-        case 1:
-            //base64
-            _dstTextView.string = [enData encodeBase64WithOptions:0];
-            break;
-        default:
-            break;
+    if (enData) {
+        
+        NSLog(@"%@",enData.hexString);
+        
+        switch (_dstDataType.indexOfSelectedItem) {
+            case 0:
+                //hex
+                _dstTextView.string = enData.hexString;
+                break;
+            case 1:
+                //base64
+                _dstTextView.string = [enData encodeBase64WithOptions:0];
+                break;
+            default:
+                break;
+        }
+    }else
+    {
+        _dstTextView.string = @"";
+        if (error) {
+            
+            if (error.userInfo && error.userInfo[@"message"] ) {
+                
+                _dstTextView.string = error.userInfo[@"message"];
+            }
+            
+        }
     }
 
 }

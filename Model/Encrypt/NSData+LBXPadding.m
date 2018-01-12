@@ -7,6 +7,7 @@
 //
 
 #import "NSData+LBXPadding.h"
+#import "NSData+LBXConverter.h"
 
 @implementation NSData (LBXPadding)
 
@@ -40,6 +41,8 @@
             [data appendData:self];
             [data appendBytes:cPaddingData length:paddingLen];
             paddedData = data;
+            
+            NSLog(@"paddedData hex:%@",paddedData.hexString);
         }
             break;
         
@@ -126,6 +129,8 @@
     //解密后的数据
     uint8_t *bytes = (uint8_t*)self.bytes;
 
+    
+    
     switch (padding) {
         case LBXPaddingMode_NONE:
             unPaddedData = self;
@@ -136,12 +141,15 @@
         case LBXPaddingMode_ISO10126:
         {
             //都是最后一个字节表示补位的长度
-            paddingLen = bytes[self.length-1];
+            NSInteger datalen = self.length;
+            NSLog(@"datalen:%ld",datalen);
+            paddingLen = bytes[datalen-1];
+            
             if (paddingLen >= self.length ) {
                 
                 return nil;
             }
-            unPaddedData = [NSData dataWithBytes:bytes length:self.length - paddingLen];
+            unPaddedData = [NSData dataWithBytes:self.bytes length:self.length - paddingLen];
         }
             break;
         case LBXPaddingMode_Zero:

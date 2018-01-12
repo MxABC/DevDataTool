@@ -237,17 +237,34 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
     
     if (![self LBXFixKeyLength:alg key:keyData iv:ivData]) {
         NSLog(@"密钥与iv长度不正确");
+        
+        if (error) {
+            *error  = [NSError errorWithDomain:@"DataHandler" code:-1 userInfo:@{@"message":@"密钥或iv长度不正确"}];
+        }
+        
         return nil;
     }
 
     //加密或解密前数据
     NSData *plainData = self;
+    NSLog(@"hex:%@",plainData.hexString);
+
     
     if (op == LBXOperaton_Encrypt) {
         
         //加密补位
         uint8_t blockSize = [self LBXBlockSize:alg];
         plainData = [plainData LBXPaddingWithMode:padding blockSize:blockSize];
+        
+        
+        //如果plainData不是blockSize的整数倍，则不正确
+        if (plainData.length % blockSize != 0) {
+            
+            if (error) {
+                *error  = [NSError errorWithDomain:@"DataHandler" code:-1 userInfo:@{@"message":@"加密前数据分组后长度不正确"}];
+            }
+            return nil;
+        }
     }
     
     NSLog(@"hex:%@",plainData.hexString);
@@ -262,6 +279,7 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
             break;
         case LBXOptionMode_CBC:
             cryptData = [plainData LBXCryptCBCWithOp:op algorithm:alg key:keyData iv:ivData error:error];
+            break;
         case LBXOptionMode_PCBC:
             cryptData = [plainData LBXCryptPCBCWithOp:op algorithm:alg key:keyData iv:ivData error:error];
             break;
@@ -274,7 +292,6 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
         case LBXOptionMode_CTR:
             cryptData = [plainData LBXCryptCTRWithOp:op algorithm:alg key:keyData iv:ivData error:error];
             break;
-            
             
         default:
             break;
@@ -451,9 +468,14 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
         
                     //存储分组数据
                     [cbcData appendBytes:bufferPtr length:bufferPtrSize];
+                    
+                    NSLog(@"cbc hex:%@",cbcData.hexString);
+
                 }
                 
             }
+            
+            NSLog(@"cbc hex:%@",cbcData.hexString);
             
             cryptData = cbcData;
             
