@@ -1,8 +1,9 @@
 //
-//  NSData+LBXDES.m
+//  NSData+LBXCrypt.m
 //  DataHandler
 //
 //  Created by lbxia on 2016/10/28.
+//  https://github.com/MxABC/DevDataTool
 //  Copyright © 2016年 lbx. All rights reserved.
 //
 

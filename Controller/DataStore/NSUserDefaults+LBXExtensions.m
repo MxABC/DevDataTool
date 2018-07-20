@@ -3,7 +3,8 @@
 //
 //
 //  Created by lbxia on 16/9/5.
-//  Copyright © 2016年 LBX. All rights reserved.
+//  https://github.com/MxABC/DevDataTool
+//  Copyright © 2016年 lbx. All rights reserved.
 //
 
 #import "NSUserDefaults+LBXExtensions.h"
