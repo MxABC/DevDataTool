@@ -1,18 +1,18 @@
 //
-//  HistortyData.h
+//  NSData+LBXSM3.h
 //  DataHandler
 //
-//  Created by lbxia on 2017/5/25.
+//  Created by lbxia on 2017/4/18.
 //  https://github.com/MxABC/DevDataTool
 //  Copyright © 2017年 lbx. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+@interface NSData (LBXSM3)
 
-//#define <#macro#>
+- (NSData*)SM3;
 
-
-@interface HistortyData : NSObject
+- (NSData*)HMACSM3WithKey:(NSData*)key;
 
 @end

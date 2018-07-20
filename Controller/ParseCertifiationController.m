@@ -3,7 +3,8 @@
 //  DataHandler
 //
 //  Created by lbxia on 2017/5/23.
-//  Copyright © 2017年 LBX. All rights reserved.
+//  https://github.com/MxABC/DevDataTool
+//  Copyright © 2017年 lbx. All rights reserved.
 //
 
 #import "ParseCertifiationController.h"
@@ -12,7 +13,7 @@
 #import "NSData+LBXConverter.h"
 #import "NSData+LBXHash.h"
 #import "NSData+LBXCommonCrypto.h"
-#import "NSString+LBXHash.h"
+
 
 @interface ParseCertifiationController ()
 @property (unsafe_unretained) IBOutlet NSTextView *srcTextView;
@@ -51,7 +52,7 @@
     LBXCertificationModel *baseModel = [[LBXCertificate sharedManager]certficationBaseInfo];
     
     [str appendFormat:@"  --- 证书基本信息 ---\r\n"];
-    [str appendFormat:@"序列号: %@\r\n",baseModel.hexSerialNumber.disperseHexString];
+    [str appendFormat:@"序列号: %@\r\n",baseModel.hexSerialNumber.disperseString];
     [str appendFormat:@"序列号(大数表示): %@\r\n",baseModel.bigNumSerialNumber];
     [str appendFormat:@"版本号: %@\r\n",baseModel.cerVersion];
     [str appendFormat:@"签名算法: %@\r\n",baseModel.signAlgorithm];
@@ -145,12 +146,12 @@
 
     [str appendString:@"\r\n  --- 公共密钥信息 ---\r\n"];
 //    [str appendFormat:@"算法: %@\r\n",baseModel.signAlgorithm];
-    [str appendFormat:@"公共密钥 %ld 字节:%@\r\n",baseModel.publicKey.length/2,baseModel.publicKey.disperseHexString];
+    [str appendFormat:@"公共密钥 %ld 字节:%@\r\n",baseModel.publicKey.length/2,baseModel.publicKey.disperseString];
     [str appendFormat:@"密钥用途: %@\r\n",baseModel.keyUsage];
     
     [str appendString:@"\r\n  --- 签名信息 ---\r\n"];
     //    [str appendFormat:@"算法: %@\r\n",baseModel.signAlgorithm];
-    [str appendFormat:@"签名值 %ld 字节: %@\r\n",baseModel.signature.length/2,baseModel.signature.disperseHexString];
+    [str appendFormat:@"签名值 %ld 字节: %@\r\n",baseModel.signature.length/2,baseModel.signature.disperseString];
     
     
     [str appendString:@"\r\n  --- 指纹信息 ---\r\n"];
@@ -166,14 +167,14 @@
 {
     NSData *cerData = [_srcTextView.string hexString2Data];
     
-    return cerData.MD5Sum.hexString.disperseHexString;
+    return cerData.MD5Sum.hexString.disperseString;
 }
 
 - (NSString*)fingerPrint_sha1
 {
     NSData *cerData = [_srcTextView.string hexString2Data];
     
-    return cerData.SHA1Hash.hexString.disperseHexString;
+    return cerData.SHA1Hash.hexString.disperseString;
 }
 
 //ok!

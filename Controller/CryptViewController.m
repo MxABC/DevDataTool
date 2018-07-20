@@ -3,7 +3,8 @@
 //  DataHandler
 //
 //  Created by lbxia on 2017/5/10.
-//  Copyright © 2017年 LBX. All rights reserved.
+//  https://github.com/MxABC/DevDataTool
+//  Copyright © 2017年 lbx. All rights reserved.
 //
 
 #import "CryptViewController.h"
@@ -411,7 +412,7 @@
     }
     else if (_ivDataType.indexOfSelectedItem == 2)
     {
-        ivString = [ivString decodeBase64WithOptions:0];
+        ivString = [ivString decodeBase64StringWithOptions:0].utf8String;
     }
     return ivString;
 }

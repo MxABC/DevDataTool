@@ -3,7 +3,8 @@
 //  DataHandler
 //
 //  Created by lbxia on 2017/5/8.
-//  Copyright © 2017年 LBX. All rights reserved.
+//  https://github.com/MxABC/DevDataTool
+//  Copyright © 2017年 lbx. All rights reserved.
 //
 
 #import "Base64ViewController.h"
@@ -148,9 +149,10 @@
     }
     
     if (_dstDataType.indexOfSelectedItem == 0) {
-        _dstTextView.string = [plainData decodeBase64WithOptions:options];
+        _dstTextView.string = [plainData.utf8String decodeBase64StringWithOptions:0].utf8String;
+
     }else{
-        _dstTextView.string = [plainData decodeBase64WithOptions:options].hexString;
+        _dstTextView.string = [plainData.utf8String decodeBase64StringWithOptions:0].hexString;
     }
     
 }

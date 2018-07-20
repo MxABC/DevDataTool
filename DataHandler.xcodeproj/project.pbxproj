@@ -19,12 +19,8 @@
 		7340FCEB1ED6FF83007A06AD /* HistortyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340FCEA1ED6FF83007A06AD /* HistortyData.m */; };
 		7340FCEE1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340FCED1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m */; };
 		734F45791EC2A05200C9E56B /* NSData+LBXHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45681EC2A05200C9E56B /* NSData+LBXHash.m */; };
-		734F457A1EC2A05200C9E56B /* NSString+LBXHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F456A1EC2A05200C9E56B /* NSString+LBXHash.m */; };
+		734F457A1EC2A05200C9E56B /* NSString+LBXFileHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F456A1EC2A05200C9E56B /* NSString+LBXFileHash.m */; };
 		734F457B1EC2A05200C9E56B /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = 734F456C1EC2A05200C9E56B /* keccak.c */; };
-		734F457C1EC2A05200C9E56B /* NSData+SHA3.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F456F1EC2A05200C9E56B /* NSData+SHA3.m */; };
-		734F457D1EC2A05200C9E56B /* NSString+SHA3.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45711EC2A05200C9E56B /* NSString+SHA3.m */; };
-		734F457E1EC2A05200C9E56B /* sm3.c in Sources */ = {isa = PBXBuildFile; fileRef = 734F45731EC2A05200C9E56B /* sm3.c */; };
-		734F457F1EC2A05200C9E56B /* sm3_hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 734F45751EC2A05200C9E56B /* sm3_hmac.c */; };
 		734F45801EC2A05200C9E56B /* NSData+LBXCommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */; };
 		734F45831EC2A07400C9E56B /* NSData+LBXCypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45821EC2A07400C9E56B /* NSData+LBXCypt.m */; };
 		734F45861EC2C58300C9E56B /* NSData+LBXPadding.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45851EC2C58300C9E56B /* NSData+LBXPadding.m */; };
@@ -38,12 +34,13 @@
 		739004141EC0226400BBBF77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004131EC0226400BBBF77 /* AppDelegate.m */; };
 		739004191EC031A600BBBF77 /* Base64ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004171EC031A600BBBF77 /* Base64ViewController.m */; };
 		7390041A1EC031A600BBBF77 /* Base64ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739004181EC031A600BBBF77 /* Base64ViewController.xib */; };
-		739004251EC04DD100BBBF77 /* NSString+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004241EC04DD100BBBF77 /* NSString+LBXBase64.m */; };
 		739004301EC053B900BBBF77 /* HashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7390042E1EC053B900BBBF77 /* HashViewController.m */; };
 		739004311EC053B900BBBF77 /* HashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7390042F1EC053B900BBBF77 /* HashViewController.xib */; };
-		739004371EC05B6000BBBF77 /* NSData+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004341EC05B6000BBBF77 /* NSData+LBXConverter.m */; };
-		739004381EC05B6000BBBF77 /* NSString+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004361EC05B6000BBBF77 /* NSString+LBXConverter.m */; };
-		739004441EC0753500BBBF77 /* NSData+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 739004431EC0753500BBBF77 /* NSData+LBXBase64.m */; };
+		73C36EE62100374E0095D529 /* NSData+LBXSM3.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C36EE52100374E0095D529 /* NSData+LBXSM3.m */; };
+		73D30D682101BC04007F5121 /* NSData+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30D612101BC04007F5121 /* NSData+LBXConverter.m */; };
+		73D30D692101BC04007F5121 /* NSString+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30D622101BC04007F5121 /* NSString+LBXConverter.m */; };
+		73D30D6A2101BC04007F5121 /* NSData+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30D642101BC04007F5121 /* NSData+LBXBase64.m */; };
+		73D30D6B2101BC04007F5121 /* NSString+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30D662101BC04007F5121 /* NSString+LBXBase64.m */; };
 		CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */; };
 /* End PBXBuildFile section */
 
@@ -72,17 +69,10 @@
 		7340FCED1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+LBXExtensions.m"; sourceTree = "<group>"; };
 		734F45671EC2A05200C9E56B /* NSData+LBXHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXHash.h"; sourceTree = "<group>"; };
 		734F45681EC2A05200C9E56B /* NSData+LBXHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXHash.m"; sourceTree = "<group>"; };
-		734F45691EC2A05200C9E56B /* NSString+LBXHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXHash.h"; sourceTree = "<group>"; };
-		734F456A1EC2A05200C9E56B /* NSString+LBXHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXHash.m"; sourceTree = "<group>"; };
+		734F45691EC2A05200C9E56B /* NSString+LBXFileHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXFileHash.h"; sourceTree = "<group>"; };
+		734F456A1EC2A05200C9E56B /* NSString+LBXFileHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXFileHash.m"; sourceTree = "<group>"; };
 		734F456C1EC2A05200C9E56B /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
 		734F456D1EC2A05200C9E56B /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
-		734F456E1EC2A05200C9E56B /* NSData+SHA3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SHA3.h"; sourceTree = "<group>"; };
-		734F456F1EC2A05200C9E56B /* NSData+SHA3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SHA3.m"; sourceTree = "<group>"; };
-		734F45701EC2A05200C9E56B /* NSString+SHA3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHA3.h"; sourceTree = "<group>"; };
-		734F45711EC2A05200C9E56B /* NSString+SHA3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHA3.m"; sourceTree = "<group>"; };
-		734F45731EC2A05200C9E56B /* sm3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm3.c; sourceTree = "<group>"; };
-		734F45741EC2A05200C9E56B /* sm3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm3.h; sourceTree = "<group>"; };
-		734F45751EC2A05200C9E56B /* sm3_hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm3_hmac.c; sourceTree = "<group>"; };
 		734F45761EC2A05200C9E56B /* NSData+LBXCommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXCommonCrypto.h"; sourceTree = "<group>"; };
 		734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXCommonCrypto.m"; sourceTree = "<group>"; };
 		734F45811EC2A07400C9E56B /* NSData+LBXCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXCrypt.h"; sourceTree = "<group>"; };
@@ -96,7 +86,7 @@
 		735C24741EC4547100D604C8 /* NSData+LBXSM4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXSM4.m"; sourceTree = "<group>"; };
 		735C24761EC4571E00D604C8 /* sm4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm4.c; sourceTree = "<group>"; };
 		735C24771EC4571E00D604C8 /* sm4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm4.h; sourceTree = "<group>"; };
-		735C247C1EC45BE300D604C8 /* LBXCrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXCrypt.h; sourceTree = "<group>"; };
+		735C247C1EC45BE300D604C8 /* LBXCryptDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXCryptDefines.h; sourceTree = "<group>"; };
 		7385ABB71E66934E001E74E1 /* DataHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7385ABBA1E66934E001E74E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7385ABBE1E66934E001E74E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,17 +97,20 @@
 		739004161EC031A600BBBF77 /* Base64ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64ViewController.h; sourceTree = "<group>"; };
 		739004171EC031A600BBBF77 /* Base64ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64ViewController.m; sourceTree = "<group>"; };
 		739004181EC031A600BBBF77 /* Base64ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Base64ViewController.xib; sourceTree = "<group>"; };
-		739004231EC04DD100BBBF77 /* NSString+LBXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXBase64.h"; sourceTree = "<group>"; };
-		739004241EC04DD100BBBF77 /* NSString+LBXBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXBase64.m"; sourceTree = "<group>"; };
 		7390042D1EC053B900BBBF77 /* HashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashViewController.h; sourceTree = "<group>"; };
 		7390042E1EC053B900BBBF77 /* HashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashViewController.m; sourceTree = "<group>"; };
 		7390042F1EC053B900BBBF77 /* HashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HashViewController.xib; sourceTree = "<group>"; };
-		739004331EC05B6000BBBF77 /* NSData+LBXConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXConverter.h"; sourceTree = "<group>"; };
-		739004341EC05B6000BBBF77 /* NSData+LBXConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXConverter.m"; sourceTree = "<group>"; };
-		739004351EC05B6000BBBF77 /* NSString+LBXConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXConverter.h"; sourceTree = "<group>"; };
-		739004361EC05B6000BBBF77 /* NSString+LBXConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXConverter.m"; sourceTree = "<group>"; };
-		739004421EC0753500BBBF77 /* NSData+LBXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXBase64.h"; sourceTree = "<group>"; };
-		739004431EC0753500BBBF77 /* NSData+LBXBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXBase64.m"; sourceTree = "<group>"; };
+		73C36EE42100374D0095D529 /* NSData+LBXSM3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXSM3.h"; sourceTree = "<group>"; };
+		73C36EE52100374E0095D529 /* NSData+LBXSM3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXSM3.m"; sourceTree = "<group>"; };
+		73D30D5D2101BB54007F5121 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		73D30D5F2101BC04007F5121 /* NSString+LBXConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXConverter.h"; sourceTree = "<group>"; };
+		73D30D602101BC04007F5121 /* NSData+LBXConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXConverter.h"; sourceTree = "<group>"; };
+		73D30D612101BC04007F5121 /* NSData+LBXConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXConverter.m"; sourceTree = "<group>"; };
+		73D30D622101BC04007F5121 /* NSString+LBXConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXConverter.m"; sourceTree = "<group>"; };
+		73D30D642101BC04007F5121 /* NSData+LBXBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXBase64.m"; sourceTree = "<group>"; };
+		73D30D652101BC04007F5121 /* NSString+LBXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXBase64.h"; sourceTree = "<group>"; };
+		73D30D662101BC04007F5121 /* NSString+LBXBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXBase64.m"; sourceTree = "<group>"; };
+		73D30D672101BC04007F5121 /* NSData+LBXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXBase64.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,38 +174,15 @@
 			path = DataStore;
 			sourceTree = "<group>";
 		};
-		734F45611EC2A05200C9E56B /* Encrypt */ = {
+		734F45611EC2A05200C9E56B /* LBXDataHandler */ = {
 			isa = PBXGroup;
 			children = (
-				735C246F1EC4527E00D604C8 /* SM4 */,
-				734F45621EC2A05200C9E56B /* AES */,
-				734F45631EC2A05200C9E56B /* DES */,
+				73D30D632101BC04007F5121 /* Base64 */,
+				73D30D5E2101BC04007F5121 /* Converter */,
+				73D30D5C2101893C007F5121 /* Crypto */,
 				734F45661EC2A05200C9E56B /* HASH */,
-				739004321EC05B5B00BBBF77 /* Transform */,
-				739004221EC04C4D00BBBF77 /* Base64 */,
-				734F45761EC2A05200C9E56B /* NSData+LBXCommonCrypto.h */,
-				734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */,
-				734F45811EC2A07400C9E56B /* NSData+LBXCrypt.h */,
-				734F45821EC2A07400C9E56B /* NSData+LBXCypt.m */,
-				734F45841EC2C58300C9E56B /* NSData+LBXPadding.h */,
-				734F45851EC2C58300C9E56B /* NSData+LBXPadding.m */,
-				735C247C1EC45BE300D604C8 /* LBXCrypt.h */,
 			);
-			path = Encrypt;
-			sourceTree = "<group>";
-		};
-		734F45621EC2A05200C9E56B /* AES */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AES;
-			sourceTree = "<group>";
-		};
-		734F45631EC2A05200C9E56B /* DES */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DES;
+			path = LBXDataHandler;
 			sourceTree = "<group>";
 		};
 		734F45661EC2A05200C9E56B /* HASH */ = {
@@ -220,33 +190,28 @@
 			children = (
 				734F45671EC2A05200C9E56B /* NSData+LBXHash.h */,
 				734F45681EC2A05200C9E56B /* NSData+LBXHash.m */,
-				734F45691EC2A05200C9E56B /* NSString+LBXHash.h */,
-				734F456A1EC2A05200C9E56B /* NSString+LBXHash.m */,
-				734F456B1EC2A05200C9E56B /* SHA3 */,
+				734F45691EC2A05200C9E56B /* NSString+LBXFileHash.h */,
+				734F456A1EC2A05200C9E56B /* NSString+LBXFileHash.m */,
+				734F456B1EC2A05200C9E56B /* keccak */,
 				734F45721EC2A05200C9E56B /* SM3 */,
 			);
 			path = HASH;
 			sourceTree = "<group>";
 		};
-		734F456B1EC2A05200C9E56B /* SHA3 */ = {
+		734F456B1EC2A05200C9E56B /* keccak */ = {
 			isa = PBXGroup;
 			children = (
 				734F456C1EC2A05200C9E56B /* keccak.c */,
 				734F456D1EC2A05200C9E56B /* keccak.h */,
-				734F456E1EC2A05200C9E56B /* NSData+SHA3.h */,
-				734F456F1EC2A05200C9E56B /* NSData+SHA3.m */,
-				734F45701EC2A05200C9E56B /* NSString+SHA3.h */,
-				734F45711EC2A05200C9E56B /* NSString+SHA3.m */,
 			);
-			path = SHA3;
+			path = keccak;
 			sourceTree = "<group>";
 		};
 		734F45721EC2A05200C9E56B /* SM3 */ = {
 			isa = PBXGroup;
 			children = (
-				734F45731EC2A05200C9E56B /* sm3.c */,
-				734F45741EC2A05200C9E56B /* sm3.h */,
-				734F45751EC2A05200C9E56B /* sm3_hmac.c */,
+				73C36EE42100374D0095D529 /* NSData+LBXSM3.h */,
+				73C36EE52100374E0095D529 /* NSData+LBXSM3.m */,
 			);
 			path = SM3;
 			sourceTree = "<group>";
@@ -265,6 +230,7 @@
 		7385ABAE1E66934E001E74E1 = {
 			isa = PBXGroup;
 			children = (
+				73D30D5D2101BB54007F5121 /* PrefixHeader.pch */,
 				739004211EC04C4D00BBBF77 /* Model */,
 				739004151EC0318F00BBBF77 /* Controller */,
 				7385ABB91E66934E001E74E1 /* DataHandler */,
@@ -333,33 +299,46 @@
 			isa = PBXGroup;
 			children = (
 				733FE4811EC982BC00046FBA /* OpenSSL */,
-				734F45611EC2A05200C9E56B /* Encrypt */,
+				734F45611EC2A05200C9E56B /* LBXDataHandler */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		739004221EC04C4D00BBBF77 /* Base64 */ = {
+		73D30D5C2101893C007F5121 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				739004231EC04DD100BBBF77 /* NSString+LBXBase64.h */,
-				739004241EC04DD100BBBF77 /* NSString+LBXBase64.m */,
-				739004421EC0753500BBBF77 /* NSData+LBXBase64.h */,
-				739004431EC0753500BBBF77 /* NSData+LBXBase64.m */,
+				735C246F1EC4527E00D604C8 /* SM4 */,
+				734F45761EC2A05200C9E56B /* NSData+LBXCommonCrypto.h */,
+				734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */,
+				734F45811EC2A07400C9E56B /* NSData+LBXCrypt.h */,
+				734F45821EC2A07400C9E56B /* NSData+LBXCypt.m */,
+				734F45841EC2C58300C9E56B /* NSData+LBXPadding.h */,
+				734F45851EC2C58300C9E56B /* NSData+LBXPadding.m */,
+				735C247C1EC45BE300D604C8 /* LBXCryptDefines.h */,
 			);
-			name = Base64;
-			path = ../Base64;
+			path = Crypto;
 			sourceTree = "<group>";
 		};
-		739004321EC05B5B00BBBF77 /* Transform */ = {
+		73D30D5E2101BC04007F5121 /* Converter */ = {
 			isa = PBXGroup;
 			children = (
-				739004331EC05B6000BBBF77 /* NSData+LBXConverter.h */,
-				739004341EC05B6000BBBF77 /* NSData+LBXConverter.m */,
-				739004351EC05B6000BBBF77 /* NSString+LBXConverter.h */,
-				739004361EC05B6000BBBF77 /* NSString+LBXConverter.m */,
+				73D30D602101BC04007F5121 /* NSData+LBXConverter.h */,
+				73D30D612101BC04007F5121 /* NSData+LBXConverter.m */,
+				73D30D5F2101BC04007F5121 /* NSString+LBXConverter.h */,
+				73D30D622101BC04007F5121 /* NSString+LBXConverter.m */,
 			);
-			name = Transform;
-			path = ../Transform;
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		73D30D632101BC04007F5121 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				73D30D672101BC04007F5121 /* NSData+LBXBase64.h */,
+				73D30D642101BC04007F5121 /* NSData+LBXBase64.m */,
+				73D30D652101BC04007F5121 /* NSString+LBXBase64.h */,
+				73D30D662101BC04007F5121 /* NSString+LBXBase64.m */,
+			);
+			path = Base64;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,34 +471,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				73378A781ED41A4100F8E45F /* ParseCertifiationController.m in Sources */,
-				734F457C1EC2A05200C9E56B /* NSData+SHA3.m in Sources */,
 				735C24751EC4547100D604C8 /* NSData+LBXSM4.m in Sources */,
 				734F45831EC2A07400C9E56B /* NSData+LBXCypt.m in Sources */,
 				7385ABBF1E66934E001E74E1 /* main.m in Sources */,
-				734F457A1EC2A05200C9E56B /* NSString+LBXHash.m in Sources */,
+				734F457A1EC2A05200C9E56B /* NSString+LBXFileHash.m in Sources */,
+				73D30D6B2101BC04007F5121 /* NSString+LBXBase64.m in Sources */,
 				734F458A1EC3176600C9E56B /* CryptViewController.m in Sources */,
-				739004251EC04DD100BBBF77 /* NSString+LBXBase64.m in Sources */,
 				734F45791EC2A05200C9E56B /* NSData+LBXHash.m in Sources */,
-				734F457F1EC2A05200C9E56B /* sm3_hmac.c in Sources */,
 				735C24781EC4571E00D604C8 /* sm4.c in Sources */,
-				734F457E1EC2A05200C9E56B /* sm3.c in Sources */,
+				73D30D682101BC04007F5121 /* NSData+LBXConverter.m in Sources */,
 				734F45801EC2A05200C9E56B /* NSData+LBXCommonCrypto.m in Sources */,
 				7340FCEB1ED6FF83007A06AD /* HistortyData.m in Sources */,
 				734F45861EC2C58300C9E56B /* NSData+LBXPadding.m in Sources */,
-				734F457D1EC2A05200C9E56B /* NSString+SHA3.m in Sources */,
-				739004381EC05B6000BBBF77 /* NSString+LBXConverter.m in Sources */,
 				7340FCEE1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m in Sources */,
-				739004441EC0753500BBBF77 /* NSData+LBXBase64.m in Sources */,
+				73C36EE62100374E0095D529 /* NSData+LBXSM3.m in Sources */,
 				73378A651ED3E00E00F8E45F /* WorkingOnItViewController.m in Sources */,
 				733FE4841EC982D100046FBA /* LBXBigNum.m in Sources */,
 				73378A6A1ED3E38D00F8E45F /* ConvertViewController.m in Sources */,
 				73378A741ED414BB00F8E45F /* LBXRSAVendor.m in Sources */,
 				734F457B1EC2A05200C9E56B /* keccak.c in Sources */,
-				739004371EC05B6000BBBF77 /* NSData+LBXConverter.m in Sources */,
+				73D30D692101BC04007F5121 /* NSString+LBXConverter.m in Sources */,
 				73378A731ED414BB00F8E45F /* LBXCertificate.m in Sources */,
 				739004301EC053B900BBBF77 /* HashViewController.m in Sources */,
 				739004141EC0226400BBBF77 /* AppDelegate.m in Sources */,
 				739004191EC031A600BBBF77 /* Base64ViewController.m in Sources */,
+				73D30D6A2101BC04007F5121 /* NSData+LBXBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +596,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8LQ7CL73D8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = DataHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -635,6 +613,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8LQ7CL73D8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = DataHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;

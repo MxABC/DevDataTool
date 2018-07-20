@@ -136,8 +136,8 @@
  */
 - (LBXCertificateIssuerModel*)certificationWhoHave;
 
-#pragma mark --验证签名
 
+#pragma mark --验证签名
 
 - (BOOL)rsa_check_sign:(NSString*)srcString signString:(NSString*)signString;
 
@@ -148,7 +148,3 @@
 + (NSString*)SHA1:(NSString*)src;
 
 @end
-
-
-
-
