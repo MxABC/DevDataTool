@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'LBXDataHandler'
-    s.version      = '1.0.0'
+    s.version      = '1.0.1'
     s.summary      = 'iOS data converter,hash,encryption and decryption'
     s.homepage     = 'https://github.com/MxABC/DevDataTool'
     s.license      = 'MIT'
