@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.prefix_header_contents = '#import <Foundation/Foundation.h>'
     s.source_files = 'Model/LBXDataHandler/*.*'
-    s.source_files = 'Model/LBXDataHandler/Crypto/*.*/*.{h,m,c}','Model/LBXDataHandler/HASH/*.*/*.{h,m,c}','Model/LBXDataHandler/Base64/*.{h,m,c}','Model/LBXDataHandler/Converter/*.{h,m}'
+    s.source_files = 'Model/LBXDataHandler/Crypto/**/*.{h,m,c}','Model/LBXDataHandler/HASH/**/*.{h,m,c}','Model/LBXDataHandler/Base64/*.{h,m,c}','Model/LBXDataHandler/Converter/*.{h,m}'
 
 end
