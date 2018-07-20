@@ -12,6 +12,12 @@
 
 @interface NSData (LBXConverter)
 
+
+/**
+ * 转换成十六进制字符串,一般使用在打印日志，定位数据问题
+ */
+- (NSString*)hexString;
+
 //转换成NSString,utf8编码
 - (NSString*)utf8String;
 
@@ -21,10 +27,7 @@
 //转成成NSString,ASCII编码
 - (NSString*)asciiString;
 
-/**
- * 转换成十六进制字符串
- */
-- (NSString*)hexString;
+
 
 /**
  *  转换成NSDictionary

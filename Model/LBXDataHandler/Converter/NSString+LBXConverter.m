@@ -11,20 +11,6 @@
 
 @implementation NSString (LBXConverter)
 
-- (NSString*)hexString
-{
-    NSMutableString* hexString = [[NSMutableString alloc]initWithCapacity:self.length * 2];
-    
-    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
-    
-    const unsigned char *p = [data bytes];
-    
-    for (int i=0; i < [data length]; i++) {
-        [hexString appendFormat:@"%02x", *p++];
-    }
-    return hexString.uppercaseString;
-}
-
 - (NSString*)disperseString
 {
     NSMutableString *disperseString = [[NSMutableString alloc]initWithCapacity:self.length + self.length/2];
@@ -97,9 +83,6 @@
     desc = [NSString stringWithCString:[desc cStringUsingEncoding:NSNonLossyASCIIStringEncoding] encoding:NSUTF8StringEncoding];
 
 }
-
-
-
 
 - (NSString*)unicodeToUtf8
 {
@@ -282,8 +265,7 @@
 }
 
 //URLDEcode
--(NSString *)decodeURLString
-
+- (NSString *)decodeURLString
 {
     //NSString *decodedString = [encodedString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding ];
     
@@ -295,14 +277,10 @@
 }
 
 //URLDEcode
--(NSString *)decodeURLString2
-
+- (NSString *)decodeURLString2
 {
    return [self stringByRemovingPercentEncoding];
 }
-
-
-
 
 //截取2个子字符串之间的字符串
 - (NSString*)trimBetween:(NSString*)beginSubString and:(NSString*)endSubString
@@ -340,9 +318,6 @@
     return [formatter dateFromString:self];
 }
 
-
 @end
-
-
 
 

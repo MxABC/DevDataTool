@@ -14,16 +14,9 @@
 @interface NSString (LBXConverter)
 
 #pragma mark-
-#pragma mark- --16进制字符串转换
+#pragma mark- 字符串加空格
 #pragma mark-
 
-
-/**
- 16进制字符串，一般日志方便调试使用
-
- @return hexString
- */
-- (NSString*)hexString;
 
 
 /**
