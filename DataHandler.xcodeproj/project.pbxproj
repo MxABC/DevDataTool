@@ -20,14 +20,14 @@
 		7340FCEE1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340FCED1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m */; };
 		734F45791EC2A05200C9E56B /* NSData+LBXHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45681EC2A05200C9E56B /* NSData+LBXHash.m */; };
 		734F457A1EC2A05200C9E56B /* NSString+LBXFileHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F456A1EC2A05200C9E56B /* NSString+LBXFileHash.m */; };
-		734F457B1EC2A05200C9E56B /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = 734F456C1EC2A05200C9E56B /* keccak.c */; };
+		734F457B1EC2A05200C9E56B /* keccak.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F456C1EC2A05200C9E56B /* keccak.m */; };
 		734F45801EC2A05200C9E56B /* NSData+LBXCommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */; };
 		734F45831EC2A07400C9E56B /* NSData+LBXCypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45821EC2A07400C9E56B /* NSData+LBXCypt.m */; };
 		734F45861EC2C58300C9E56B /* NSData+LBXPadding.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45851EC2C58300C9E56B /* NSData+LBXPadding.m */; };
 		734F458A1EC3176600C9E56B /* CryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734F45881EC3176600C9E56B /* CryptViewController.m */; };
 		734F458B1EC3176600C9E56B /* CryptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 734F45891EC3176600C9E56B /* CryptViewController.xib */; };
 		735C24751EC4547100D604C8 /* NSData+LBXSM4.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C24741EC4547100D604C8 /* NSData+LBXSM4.m */; };
-		735C24781EC4571E00D604C8 /* sm4.c in Sources */ = {isa = PBXBuildFile; fileRef = 735C24761EC4571E00D604C8 /* sm4.c */; };
+		735C24781EC4571E00D604C8 /* sm4.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C24761EC4571E00D604C8 /* sm4.m */; };
 		7385ABBF1E66934E001E74E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7385ABBE1E66934E001E74E1 /* main.m */; };
 		7385ABC11E66934E001E74E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7385ABC01E66934E001E74E1 /* Assets.xcassets */; };
 		739004121EC0224A00BBBF77 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739004111EC0224A00BBBF77 /* MainMenu.xib */; };
@@ -72,7 +72,7 @@
 		734F45681EC2A05200C9E56B /* NSData+LBXHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXHash.m"; sourceTree = "<group>"; };
 		734F45691EC2A05200C9E56B /* NSString+LBXFileHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXFileHash.h"; sourceTree = "<group>"; };
 		734F456A1EC2A05200C9E56B /* NSString+LBXFileHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXFileHash.m"; sourceTree = "<group>"; };
-		734F456C1EC2A05200C9E56B /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
+		734F456C1EC2A05200C9E56B /* keccak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = keccak.m; sourceTree = "<group>"; };
 		734F456D1EC2A05200C9E56B /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
 		734F45761EC2A05200C9E56B /* NSData+LBXCommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXCommonCrypto.h"; sourceTree = "<group>"; };
 		734F45771EC2A05200C9E56B /* NSData+LBXCommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXCommonCrypto.m"; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		734F45891EC3176600C9E56B /* CryptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CryptViewController.xib; sourceTree = "<group>"; };
 		735C24731EC4547100D604C8 /* NSData+LBXSM4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXSM4.h"; sourceTree = "<group>"; };
 		735C24741EC4547100D604C8 /* NSData+LBXSM4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXSM4.m"; sourceTree = "<group>"; };
-		735C24761EC4571E00D604C8 /* sm4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sm4.c; sourceTree = "<group>"; };
+		735C24761EC4571E00D604C8 /* sm4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sm4.m; sourceTree = "<group>"; };
 		735C24771EC4571E00D604C8 /* sm4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm4.h; sourceTree = "<group>"; };
 		735C247C1EC45BE300D604C8 /* LBXCryptDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXCryptDefines.h; sourceTree = "<group>"; };
 		7385ABB71E66934E001E74E1 /* DataHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,7 +203,7 @@
 		734F456B1EC2A05200C9E56B /* keccak */ = {
 			isa = PBXGroup;
 			children = (
-				734F456C1EC2A05200C9E56B /* keccak.c */,
+				734F456C1EC2A05200C9E56B /* keccak.m */,
 				734F456D1EC2A05200C9E56B /* keccak.h */,
 			);
 			path = keccak;
@@ -221,7 +221,7 @@
 		735C246F1EC4527E00D604C8 /* SM4 */ = {
 			isa = PBXGroup;
 			children = (
-				735C24761EC4571E00D604C8 /* sm4.c */,
+				735C24761EC4571E00D604C8 /* sm4.m */,
 				735C24771EC4571E00D604C8 /* sm4.h */,
 				735C24731EC4547100D604C8 /* NSData+LBXSM4.h */,
 				735C24741EC4547100D604C8 /* NSData+LBXSM4.m */,
@@ -482,7 +482,7 @@
 				73D30D6B2101BC04007F5121 /* NSString+LBXBase64.m in Sources */,
 				734F458A1EC3176600C9E56B /* CryptViewController.m in Sources */,
 				734F45791EC2A05200C9E56B /* NSData+LBXHash.m in Sources */,
-				735C24781EC4571E00D604C8 /* sm4.c in Sources */,
+				735C24781EC4571E00D604C8 /* sm4.m in Sources */,
 				73D30D682101BC04007F5121 /* NSData+LBXConverter.m in Sources */,
 				734F45801EC2A05200C9E56B /* NSData+LBXCommonCrypto.m in Sources */,
 				7340FCEB1ED6FF83007A06AD /* HistortyData.m in Sources */,
@@ -493,7 +493,7 @@
 				733FE4841EC982D100046FBA /* LBXBigNum.m in Sources */,
 				73378A6A1ED3E38D00F8E45F /* ConvertViewController.m in Sources */,
 				73378A741ED414BB00F8E45F /* LBXRSAVendor.m in Sources */,
-				734F457B1EC2A05200C9E56B /* keccak.c in Sources */,
+				734F457B1EC2A05200C9E56B /* keccak.m in Sources */,
 				73D30D692101BC04007F5121 /* NSString+LBXConverter.m in Sources */,
 				73378A731ED414BB00F8E45F /* LBXCertificate.m in Sources */,
 				739004301EC053B900BBBF77 /* HashViewController.m in Sources */,
