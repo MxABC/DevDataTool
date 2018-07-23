@@ -185,6 +185,14 @@
 - (NSDate *)dateWithFormat:(NSString*)format;
 
 
+/**
+ 毫秒为单位的时间戳
+
+ @return 日期
+ */
+- (NSDate *)timestamp2Date;
+
+
 #pragma mark-
 #pragma mark- URL特殊字符处理
 #pragma mark-

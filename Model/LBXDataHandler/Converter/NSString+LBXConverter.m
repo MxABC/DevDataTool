@@ -318,6 +318,16 @@
     return [formatter dateFromString:self];
 }
 
+- (NSDate *)timestamp2Date
+{
+    // timeStampString 是服务器返回的13位时间戳
+    //    NSString *timeStampString  = @"1495453213000";
+    // iOS 生成的时间戳是10位
+    NSTimeInterval interval    = [self doubleValue] / 1000.0;
+    return  [NSDate dateWithTimeIntervalSince1970:interval];
+    
+}
+
 @end
 
 
