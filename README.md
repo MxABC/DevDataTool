@@ -20,7 +20,7 @@ Mac OS X 10.9以上 开发调试小工具
 包含base64,数据转换，摘要算法，对称加解密
 
 ```
-  pod 'LBXDataHandler',git:'https://github.com/MxABC/DevDataTool.git',tag:'1.0.1'
+ pod 'LBXDataHandler', '~> 1.0.3'
 ```
 
 #### 文件说明
