@@ -148,7 +148,7 @@
     
     
     //密钥长度
-    uint8_t keylength = (uint8)dataKey.length;
+    uint8_t keylength = (uint8_t)dataKey.length;
     
     //分组长度
     uint8_t blocksize = [self blockSizeWithAlg:alg];
