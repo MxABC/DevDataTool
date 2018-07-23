@@ -41,6 +41,7 @@
 		73D30D692101BC04007F5121 /* NSString+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30D622101BC04007F5121 /* NSString+LBXConverter.m */; };
 		73D30D6A2101BC04007F5121 /* NSData+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30D642101BC04007F5121 /* NSData+LBXBase64.m */; };
 		73D30D6B2101BC04007F5121 /* NSString+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30D662101BC04007F5121 /* NSString+LBXBase64.m */; };
+		73D30D9921059213007F5121 /* LBXDataHandler.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 73D30D9821059213007F5121 /* LBXDataHandler.podspec */; };
 		CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		73D30D652101BC04007F5121 /* NSString+LBXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXBase64.h"; sourceTree = "<group>"; };
 		73D30D662101BC04007F5121 /* NSString+LBXBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBXBase64.m"; sourceTree = "<group>"; };
 		73D30D672101BC04007F5121 /* NSData+LBXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXBase64.h"; sourceTree = "<group>"; };
+		73D30D9821059213007F5121 /* LBXDataHandler.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LBXDataHandler.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 		7385ABAE1E66934E001E74E1 = {
 			isa = PBXGroup;
 			children = (
+				73D30D9821059213007F5121 /* LBXDataHandler.podspec */,
 				73D30D5D2101BB54007F5121 /* PrefixHeader.pch */,
 				739004211EC04C4D00BBBF77 /* Model */,
 				739004151EC0318F00BBBF77 /* Controller */,
@@ -407,6 +410,7 @@
 				734F458B1EC3176600C9E56B /* CryptViewController.xib in Resources */,
 				73378A6B1ED3E38D00F8E45F /* ConvertViewController.xib in Resources */,
 				7385ABC11E66934E001E74E1 /* Assets.xcassets in Resources */,
+				73D30D9921059213007F5121 /* LBXDataHandler.podspec in Resources */,
 				739004121EC0224A00BBBF77 /* MainMenu.xib in Resources */,
 				739004311EC053B900BBBF77 /* HashViewController.xib in Resources */,
 				73378A791ED41A4100F8E45F /* ParseCertifiationController.xib in Resources */,

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'LBXDataHandler'
-    s.version      = '1.0.1'
+    s.version      = '1.0.2'
     s.summary      = 'iOS data converter,hash,encryption and decryption'
     s.homepage     = 'https://github.com/MxABC/DevDataTool'
     s.license      = 'MIT'
@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = "7.0"
 
     s.requires_arc = true
-    s.prefix_header_contents = '#import <Foundation/Foundation.h>'
+    s.prefix_header_contents = '#import <Foundation/Foundation.h>','#import <UIKit/UIKit.h>'
     s.source_files = 'Model/LBXDataHandler/Crypto/**/*.{h,m,c}','Model/LBXDataHandler/HASH/**/*.{h,m,c}','Model/LBXDataHandler/Base64/*.{h,m,c}','Model/LBXDataHandler/Converter/*.{h,m}'
+    s.ios.frameworks = 'Foundation'
 
 end
