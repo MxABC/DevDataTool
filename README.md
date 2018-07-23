@@ -13,7 +13,7 @@ Mac OS X 10.9以上 开发调试小工具
 `填充方式(分组不足补位)有：PKCS7、zero、ANSIX923、ISO10126、0x80等`
 4. der,cer证书文件解析
 
-![image](https://github.com/MxABC/Resource/blob/master/macApp.jpg)
+![image](https://raw.githubusercontent.com/MxABC/Resource/master/macApp.jpg)
 
 
 #### cocoapods安装

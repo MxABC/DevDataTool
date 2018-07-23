@@ -8,14 +8,10 @@
 //
 
 #import "NSData+LBXHash.h"
+#import "NSData+LBXConverter.h"
 
 #import "NSData+LBXCommonCrypto.h"
-#import <CommonCrypto/CommonDigest.h>
-#import <CommonCrypto/CommonCryptor.h>
-#import <CommonCrypto/CommonHMAC.h>
-
 #import "NSData+LBXSM3.h"
-#import "NSData+LBXConverter.h"
 #import "keccak.h"
 
 
@@ -121,41 +117,31 @@
  */
 - (NSData*) sha3:(NSUInteger)bitsLength
 {
-    int bytes = (int)(bitsLength/8);
+    int byteslength = (int)(bitsLength/8);
     const char * string = (const char*)self.bytes;
     int size=(int)self.length;
-    uint8_t md[bytes];
-    keccak((uint8_t*)string, size, md, bytes);
+    uint8_t md[byteslength];
+    keccak((uint8_t*)string, size, md, byteslength);
     
-    return [NSData dataWithBytes:md length:bytes];
+    return [NSData dataWithBytes:md length:byteslength];
 }
 
 
 - (NSData*)sm3
 {
-//    uint8_t sm3_hashes[32] = {0};
-//
-//    sm3((uint8_t*)self.bytes, (uint32_t)self.length, sm3_hashes);
-//
-//    return [NSData dataWithBytes:sm3_hashes length:32];
-    
     return self.SM3;
 }
 
 
 //typedef uint32_t CCHmacAlgorithm;
 //
-- (NSData*)hmacWithKey:(id)key algorithm:(LBXHmacAlgorithm)alg
+- (NSData*)hmacWithKey:(NSData*)key algorithm:(LBXHmacAlgorithm)alg
 {
     NSData *dataKey = nil;
     if ([key isKindOfClass:[NSData class]]) {
         
         dataKey = key;
         
-    }else if ([key isKindOfClass:[NSString class]])
-    {
-        dataKey = [key dataUsingEncoding:NSUTF8StringEncoding];
-       
     }else{
         return nil;
     }
@@ -291,7 +277,7 @@
             break;
 
         case LBXHmacAlgSHA256:
-            hashData = self.SHA224Hash;
+            hashData = self.SHA256Hash;
             break;
 
         case LBXHmacAlgSHA384:

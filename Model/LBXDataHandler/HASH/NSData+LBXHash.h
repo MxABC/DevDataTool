@@ -89,10 +89,10 @@ typedef NS_ENUM(uint32_t,LBXHmacAlgorithm)
 /**
  hmac
 
- @param key key,NSString or NSData
- @param alg algorith
+ @param key key, will padding zero if key length less than block size,
+ @param alg algorithm
  @return hmac
  */
-- (NSData*)hmacWithKey:(id)key algorithm:(LBXHmacAlgorithm)alg;
+- (NSData*)hmacWithKey:(NSData*)key algorithm:(LBXHmacAlgorithm)alg;
 
 @end

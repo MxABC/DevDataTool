@@ -119,11 +119,6 @@
 #pragma mark- 转换成NSData
 #pragma mark-
 
-/**
- *  16进制表示的字符串转换成实际字节流
- */
-- (NSData*)hexString2Data;
-
 
 /**
  判断是否符合hexString的范围
@@ -133,8 +128,9 @@
 - (BOOL)isHexString;
 
 /**
- *  UTF-8编码NSData，转换前String可以为任意编码格式
+ *  16进制表示的字符串转换成实际字节流
  */
+- (NSData*)hexString2Data;
 
 
 /**

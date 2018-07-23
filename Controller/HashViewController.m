@@ -182,36 +182,38 @@
     switch (_popHashType.indexOfSelectedItem) {
         case 0:
             //MD5
-            dst = [srcString.utf8Data hmacWithKey:hmacKey algorithm:LBXHmacAlgMD5];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgMD5];
             break;
         case 1:
             //SHA1
-//            dst = [srcString.utf8Data HMACWithAlgorithm:kCCHmacAlgSHA1 key:hmacKey];
-            dst = [srcString.utf8Data hmacWithKey:hmacKey algorithm:LBXHmacAlgSHA1];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA1];
             break;
         case 2:
             //SHA2-256
-            dst = [srcString.utf8Data HMACWithAlgorithm:kCCHmacAlgSHA256 key:hmacKey];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA256];
+
             break;
         case 3:
             //SHA2-384
-            dst = [srcString.utf8Data HMACWithAlgorithm:kCCHmacAlgSHA384 key:hmacKey];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA384];
+
             break;
         case 4:
             //SHA2-512
-            dst = [srcString.utf8Data HMACWithAlgorithm:kCCHmacAlgSHA512 key:hmacKey];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA512];
+
             break;
         case 5:
             //SHA3-256
-            dst = [srcString.utf8Data hmacWithKey:hmacKey algorithm:LBXHmacAlgSHA3_256];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA3_256];
             break;
         case 6:
             //SHA3-384
-            dst = [srcString.utf8Data hmacWithKey:hmacKey algorithm:LBXHmacAlgSHA3_384];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA3_384];
             break;
         case 7:
             //SHA3-512
-            dst = [srcString.utf8Data hmacWithKey:hmacKey algorithm:LBXHmacAlgSHA3_512];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA3_512];
             break;
         case 8:
             //SM3
@@ -221,7 +223,7 @@
 //                return;
 //            }
 //            dst = [srcString.utf8Data sm3_hmacWithKey:hmacKey];
-            dst = [srcString.utf8Data hmacWithKey:hmacKey algorithm:LBXHmacAlgSM3];
+            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSM3];
             break;
             
         default:
