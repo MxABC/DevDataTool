@@ -69,6 +69,7 @@
 		7340FCEA1ED6FF83007A06AD /* HistortyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistortyData.m; sourceTree = "<group>"; };
 		7340FCEC1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+LBXExtensions.h"; sourceTree = "<group>"; };
 		7340FCED1ED6FF8C007A06AD /* NSUserDefaults+LBXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+LBXExtensions.m"; sourceTree = "<group>"; };
+		734C7A4021227AB300D0E2FD /* LBXDataHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXDataHandler.h; sourceTree = "<group>"; };
 		734F45671EC2A05200C9E56B /* NSData+LBXHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LBXHash.h"; sourceTree = "<group>"; };
 		734F45681EC2A05200C9E56B /* NSData+LBXHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LBXHash.m"; sourceTree = "<group>"; };
 		734F45691EC2A05200C9E56B /* NSString+LBXFileHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBXFileHash.h"; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 				73D30D5E2101BC04007F5121 /* Converter */,
 				73D30D5C2101893C007F5121 /* Crypto */,
 				734F45661EC2A05200C9E56B /* HASH */,
+				734C7A4021227AB300D0E2FD /* LBXDataHandler.h */,
 			);
 			path = LBXDataHandler;
 			sourceTree = "<group>";
