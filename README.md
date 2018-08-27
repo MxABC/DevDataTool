@@ -1,16 +1,22 @@
 ## DevTool
 
-实现mac端调试工具验证结果正确性,代码兼容iOS和mac,SM3,SM4使用C语言代码，其他分组ECB模式通过系统API，其他补位和分组模式代码自行通过objective-c代码实现，加强理解。代码基本通过category形式提供
+实现mac端调试工具验证结果正确性,代码兼容iOS和MacOS,其中SM3,SM4使用C语言代码，补位代码和分组模式代码自行通过objective-c代码实现，加强理解。代码基本通过category形式提供。
 
 #### 当前完成
 1. NSString和NSData各种编码转换(UTF-8,GBK,Latin1,unicode,shiftJI)
+
 2. NSData转换hexString及base64String方便调试看数据
+
 3. NSString与NSData之间转换
+
 4. base64
+
 5. hash(MD5,SHA1,SHA256,SHA3,SM3,HMAC)
+
 6. 对称加解密(DES,3DES,AES,SM4)
 `支持分组加密模式有： ECB、CBC、PCBC、CFB、OFB、CTR`
 `填充方式(分组不足补位)有：PKCS7、zero、ANSIX923、ISO10126、0x80等`
+
 7. der,cer证书文件解析
 
 #### 截图
@@ -33,6 +39,10 @@
 ```
 
 #### 文件说明
+
+##### 常用转换
+- `NSData+LBXConverter.h`
+- `NSString+LBXConverter.h`
 
 #####  摘要算法
 - `NSData+LBXHash.h` 各种摘要算法
