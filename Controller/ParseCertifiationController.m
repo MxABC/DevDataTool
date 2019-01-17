@@ -11,6 +11,8 @@
 #import "LBXCertificate.h"
 #import "NSString+LBXConverter.h"
 #import "NSData+LBXConverter.h"
+#import "NSString+LBXBase64.h"
+#import "NSData+LBXBase64.h"
 #import "NSData+LBXHash.h"
 #import "NSData+LBXCommonCrypto.h"
 
@@ -30,12 +32,24 @@
     
     [_popUpSrcDataType removeAllItems];
     [_popUpSrcDataType addItemWithTitle:@"hex"];
+    [_popUpSrcDataType addItemWithTitle:@"base64"];
 }
-
 
 - (IBAction)parseCerData:(id)sender
 {
-   if( [[LBXCertificate sharedManager]loadCerHexString:_srcTextView.string] )
+    NSString *hexString = nil;
+    
+    if (_popUpSrcDataType.indexOfSelectedItem == 0) {
+        
+        hexString = _srcTextView.string;
+    }else{
+        
+        NSData *data = [_srcTextView.string decodeBase64StringWithOptions:0];
+        hexString = data.hexString;
+    }
+    
+    
+   if( hexString && [[LBXCertificate sharedManager]loadCerHexString:hexString] )
    {
        _dstTextView.string = [self formatCerInfo];
    }
@@ -195,7 +209,14 @@
         
         NSData *fileData = [NSData dataWithContentsOfURL:[panel URL]];
         
-        _srcTextView.string = fileData.utf8String;
+        if (_popUpSrcDataType.indexOfSelectedItem == 0) {
+            _srcTextView.string = fileData.hexString;
+        }else{
+            
+            _srcTextView.string = [fileData encodeBase64WithOptions:0];
+        }
+        
+        
     }
 }
 
