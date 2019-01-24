@@ -265,7 +265,7 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
         
         
         //如果plainData不是blockSize的整数倍，则不正确
-        if (om != LBXOptionMode_CFB && om != LBXOptionMode_OFB &&  plainData.length % blockSize != 0) {
+        if (om != LBXOptionMode_CFB && om != LBXOptionMode_OFB && om != LBXOptionMode_CTR &&  plainData.length % blockSize != 0) {
             
             if (error) {
                 *error  = [NSError errorWithDomain:@"DataHandler" code:-1 userInfo:@{@"message":@"加密前数据分组后长度不正确"}];
@@ -690,7 +690,7 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
                 memset(preData, 0x00, blockSize);
             }
             
-            //CBC
+            
             NSMutableData *cbcData = [[NSMutableData alloc]initWithCapacity:bufferPtrSize];
             NSInteger len = self.length / blockSize;
             if (self.length % blockSize != 0) {
@@ -731,7 +731,6 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
                     memcpy(blockData, pBytes + i * blockSize, bufferPtrSize);
                     
                     //原文与加密结果异或
-                    
                     XOR(blockData, bufferPtr, bufferPtrSize);
                     
                     //存储结果作为下一个分组的加密数据
@@ -837,14 +836,17 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
                 memset(preData, 0x00, blockSize);
             }
             
-            //CBC
+        
             NSMutableData *cbcData = [[NSMutableData alloc]initWithCapacity:bufferPtrSize];
             NSInteger len = self.length / blockSize;
+            if (self.length % blockSize != 0) {
+                len +=1;
+            }
             
             unsigned char* pBytes = (unsigned char*)self.bytes;
             
             
-            //encrypt
+            //加密和解密操作是完全相同
             for (int i = 0; i < len; i++)
             {
                 if (alg == LBXAlgorithm_SM4) {
@@ -862,14 +864,21 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
                     }
                 }
                 
+                int16_t leftSize = self.length - i *blockSize;
+                bufferPtrSize = blockSize;
+                if (leftSize < blockSize) {
+                    //不补位，最后一个分组部分加密
+                    bufferPtrSize = leftSize;
+                }
+                
                 //原文作为加密结果的iv
-                memcpy(blockData, pBytes + i * blockSize, blockSize);
+                memcpy(blockData, pBytes + i * blockSize, bufferPtrSize);
                 
                 //存储加密结果作为下一个分组的待加密数据
                 memcpy(preData, bufferPtr, bufferPtrSize);
                 
                 //原文与加密结果异或
-                XOR(blockData, bufferPtr, blockSize);
+                XOR(blockData, bufferPtr, bufferPtrSize);
                 
                 //存储分组数据
                 [cbcData appendBytes:bufferPtr length:bufferPtrSize];
@@ -888,6 +897,7 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
 
 /**
  crypt CTR opertion
+ not support LBXAlgorithm_SM4 now
  
  @param op encryt or decrypt
  @param alg encryt algorithm
@@ -902,6 +912,8 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
                           iv:(NSData*)iv
                        error:(NSError**)error
 {
+    // not support LBXAlgorithm_SM4 now
+    
     NSData *cryptData = nil;
     switch (alg) {
         case LBXAlgorithm_DES:
@@ -929,20 +941,23 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
                 memset(preData, 0x00, blockSize);
             }
             
-            //CBC
+            
             NSMutableData *cbcData = [[NSMutableData alloc]initWithCapacity:bufferPtrSize];
             NSInteger len = self.length / blockSize;
-            
+            if (self.length % blockSize != 0) {
+                len +=1;
+            }
+            if (self.length < blockSize) {
+                bufferPtrSize = (uint32_t)self.length;
+            }
             unsigned char* pBytes = (unsigned char*)self.bytes;
             
          
             NSArray<NSData*> *arrayBounce = nil;
 #ifdef LBXBigNum_File_Exist
 
-         arrayBounce   = [LBXBigNum nonceWithIv:[NSData dataWithBytes:preData length:blockSize] nums:self.length / blockSize];
+         arrayBounce   = [LBXBigNum nonceWithIv:[NSData dataWithBytes:preData length:blockSize] nums:len];
 #endif
-            
-            
             
             //encrypt
             for (int i = 0; i < len; i++)
@@ -963,11 +978,19 @@ void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
                         NSLog(@"    LBXCryptECB faile     ");
                     }
                 }
+                
+                int16_t leftSize = self.length - i *blockSize;
+                bufferPtrSize = blockSize;
+                if (leftSize < blockSize) {
+                    //不补位，最后一个分组部分加密
+                    bufferPtrSize = leftSize;
+                }
+                
                 //原文作为加密结果的iv
-                memcpy(blockData, pBytes + i * blockSize, blockSize);
+                memcpy(blockData, pBytes + i * blockSize, bufferPtrSize);
                 
                 //原文与加密结果异或
-                XOR(blockData, bufferPtr, blockSize);
+                XOR(blockData, bufferPtr, bufferPtrSize);
                 
                 //存储分组数据
                 [cbcData appendBytes:bufferPtr length:bufferPtrSize];
