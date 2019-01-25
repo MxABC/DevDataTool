@@ -23,7 +23,7 @@
 /**
  指定格式日期
 
- @param formate 日期格式
+ @param formate 日期格式，eg. yyyy-MM-dd HH:mm:ss
  @return 日期字符串
  */
 - (NSString*)stringWithFormate:(NSString*)formate;
@@ -31,7 +31,7 @@
 
 
 /**
- 获取当前时间戳，以毫秒为单位
+ 获取当前时间戳，以毫秒为单位,结果为13位时间戳
 
  @return 时间戳
  */

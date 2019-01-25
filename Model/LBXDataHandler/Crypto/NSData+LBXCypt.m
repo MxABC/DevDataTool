@@ -178,22 +178,9 @@ static inline size_t LBXCryptECB(LBXOperaton op,
  */
 void XOR( uint8_t *input,uint8_t *output,uint32_t datalen )
 {
-//    uint8_t *src = input;
-//    uint8_t *dst = output;
-//    
-//    while (datalen > 0) {
-//        
-//        *dst ^= *src;
-//        dst++;
-//        src++;
-//        --datalen;
-//    }
-    
-    for (int i = 0; i < datalen; i++) {
-        
+    for (int i = datalen-1; i >= 0; i--) {
         output[i] ^= input[i];
     }
-    
 }
 
 
