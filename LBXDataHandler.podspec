@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = "7.0"
 
     s.requires_arc = true
-    s.prefix_header_contents = '#import <Foundation/Foundation.h>','#import <UIKit/UIKit.h>'
     s.source_files = 'Model/LBXDataHandler/Crypto/**/*.{h,m,c}','Model/LBXDataHandler/HASH/**/*.{h,m,c}','Model/LBXDataHandler/Base64/*.{h,m,c}','Model/LBXDataHandler/Converter/*.{h,m}','Model/LBXDataHandler/*.{h,m}'
     s.ios.frameworks = 'Foundation'
 
