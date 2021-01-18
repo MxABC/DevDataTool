@@ -1,9 +1,9 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Base64nl" "${PODS_ROOT}/Headers/Public/Masonry" "${PODS_ROOT}/Headers/Public/OpenSSL-Universal" "${PODS_ROOT}/Headers/Public/PXSourceList"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Base64nl" "$PODS_CONFIGURATION_BUILD_DIR/Masonry" "$PODS_CONFIGURATION_BUILD_DIR/PXSourceList" $(inherited) "${PODS_ROOT}/OpenSSL-Universal/lib-macos"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Base64nl" -isystem "${PODS_ROOT}/Headers/Public/Masonry" -isystem "${PODS_ROOT}/Headers/Public/OpenSSL-Universal" -isystem "${PODS_ROOT}/Headers/Public/PXSourceList"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Base64nl" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/PXSourceList" "${PODS_ROOT}/OpenSSL-Universal/lib-macos"
 OTHER_LDFLAGS = $(inherited) -ObjC -l"Base64nl" -l"Masonry" -l"PXSourceList" -l"crypto" -l"ssl" -framework "AppKit" -framework "Foundation"
-PODS_BUILD_DIR = $BUILD_DIR
-PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

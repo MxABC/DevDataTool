@@ -12,7 +12,7 @@
 		73378A6A1ED3E38D00F8E45F /* ConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A681ED3E38D00F8E45F /* ConvertViewController.m */; };
 		73378A6B1ED3E38D00F8E45F /* ConvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73378A691ED3E38D00F8E45F /* ConvertViewController.xib */; };
 		73378A731ED414BB00F8E45F /* LBXCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A6F1ED414BB00F8E45F /* LBXCertificate.m */; };
-		73378A741ED414BB00F8E45F /* LBXRSAVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A711ED414BB00F8E45F /* LBXRSAVendor.m */; };
+		73378A741ED414BB00F8E45F /* LBXRSAVendor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 73378A711ED414BB00F8E45F /* LBXRSAVendor.mm */; };
 		73378A781ED41A4100F8E45F /* ParseCertifiationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73378A761ED41A4100F8E45F /* ParseCertifiationController.m */; };
 		73378A791ED41A4100F8E45F /* ParseCertifiationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73378A771ED41A4100F8E45F /* ParseCertifiationController.xib */; };
 		733FE4841EC982D100046FBA /* LBXBigNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 733FE4831EC982D100046FBA /* LBXBigNum.m */; };
@@ -44,6 +44,7 @@
 		73D30D6B2101BC04007F5121 /* NSString+LBXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30D662101BC04007F5121 /* NSString+LBXBase64.m */; };
 		73D30D9921059213007F5121 /* LBXDataHandler.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 73D30D9821059213007F5121 /* LBXDataHandler.podspec */; };
 		73D30DCA2105CF08007F5121 /* NSDate+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30DC92105CF08007F5121 /* NSDate+LBXConverter.m */; };
+		8D00AA742574869D006C3956 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D00AA732574869C006C3956 /* libc++.1.tbd */; };
 		CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,7 @@
 		73378A6E1ED414BB00F8E45F /* LBXCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXCertificate.h; sourceTree = "<group>"; };
 		73378A6F1ED414BB00F8E45F /* LBXCertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXCertificate.m; sourceTree = "<group>"; };
 		73378A701ED414BB00F8E45F /* LBXRSAVendor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXRSAVendor.h; sourceTree = "<group>"; };
-		73378A711ED414BB00F8E45F /* LBXRSAVendor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXRSAVendor.m; sourceTree = "<group>"; };
+		73378A711ED414BB00F8E45F /* LBXRSAVendor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LBXRSAVendor.mm; sourceTree = "<group>"; };
 		73378A751ED41A4100F8E45F /* ParseCertifiationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseCertifiationController.h; sourceTree = "<group>"; };
 		73378A761ED41A4100F8E45F /* ParseCertifiationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseCertifiationController.m; sourceTree = "<group>"; };
 		73378A771ED41A4100F8E45F /* ParseCertifiationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseCertifiationController.xib; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		73D30D9821059213007F5121 /* LBXDataHandler.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LBXDataHandler.podspec; sourceTree = "<group>"; };
 		73D30DC82105CF08007F5121 /* NSDate+LBXConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+LBXConverter.h"; sourceTree = "<group>"; };
 		73D30DC92105CF08007F5121 /* NSDate+LBXConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LBXConverter.m"; sourceTree = "<group>"; };
+		8D00AA732574869C006C3956 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D00AA742574869D006C3956 /* libc++.1.tbd in Frameworks */,
 				CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +149,7 @@
 		53D2F8C9BBB094FBBF7169F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D00AA732574869C006C3956 /* libc++.1.tbd */,
 				5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */,
 			);
 			name = Frameworks;
@@ -157,7 +161,7 @@
 				73378A6E1ED414BB00F8E45F /* LBXCertificate.h */,
 				73378A6F1ED414BB00F8E45F /* LBXCertificate.m */,
 				73378A701ED414BB00F8E45F /* LBXRSAVendor.h */,
-				73378A711ED414BB00F8E45F /* LBXRSAVendor.m */,
+				73378A711ED414BB00F8E45F /* LBXRSAVendor.mm */,
 			);
 			path = RSA;
 			sourceTree = "<group>";
@@ -375,8 +379,6 @@
 				7385ABB31E66934E001E74E1 /* Sources */,
 				7385ABB41E66934E001E74E1 /* Frameworks */,
 				7385ABB51E66934E001E74E1 /* Resources */,
-				AAE21F0EEC37DA943744242D /* [CP] Embed Pods Frameworks */,
-				01BCBAAEE85EE220F5B25935 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -442,49 +444,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01BCBAAEE85EE220F5B25935 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DataHandler/Pods-DataHandler-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AAE21F0EEC37DA943744242D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DataHandler/Pods-DataHandler-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FEB3DF583163271469F47B05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DataHandler-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -514,7 +489,7 @@
 				73378A651ED3E00E00F8E45F /* WorkingOnItViewController.m in Sources */,
 				733FE4841EC982D100046FBA /* LBXBigNum.m in Sources */,
 				73378A6A1ED3E38D00F8E45F /* ConvertViewController.m in Sources */,
-				73378A741ED414BB00F8E45F /* LBXRSAVendor.m in Sources */,
+				73378A741ED414BB00F8E45F /* LBXRSAVendor.mm in Sources */,
 				734F457B1EC2A05200C9E56B /* keccak.m in Sources */,
 				73D30D692101BC04007F5121 /* NSString+LBXConverter.m in Sources */,
 				73378A731ED414BB00F8E45F /* LBXCertificate.m in Sources */,

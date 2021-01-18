@@ -201,14 +201,10 @@
 {
     NSMutableData *concatdata = [[NSMutableData alloc]init];
     for (NSData *data in arrData) {
-        
         [concatdata appendData:data];
     }
-    
     return concatdata;
 }
-
-
 
 - (uint8_t)blockSizeWithAlg:(LBXHmacAlgorithm)alg
 {
@@ -250,15 +246,11 @@
             blocksize = LBX_SM3_BLOCK_BYTES;
             break;
             
-            
         default:
             break;
     }
-    
     return blocksize;
 }
-
-
 
 - (NSData*)hashWithAlgorithm:(LBXHmacAlgorithm)alg
 {

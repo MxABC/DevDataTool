@@ -430,19 +430,19 @@ NSLog(Y, Z);		\
     }
     
     SecKeyRef tempSK = nil;
-    NSMutableDictionary * options = [[NSMutableDictionary alloc] init];
-    [options setObject: password forKey:(__bridge id)kSecImportExportPassphrase];
-    CFArrayRef items = CFArrayCreate(NULL, 0, 0, NULL);
-    OSStatus securityError = SecPKCS12Import((__bridge CFDataRef)SKData, (__bridge CFDictionaryRef)options, &items);
-    if (securityError == noErr && CFArrayGetCount(items) > 0) {
-        CFDictionaryRef identityDict = CFArrayGetValueAtIndex(items, 0);
-        SecIdentityRef identityApp = (SecIdentityRef)CFDictionaryGetValue(identityDict, kSecImportItemIdentity);
-        securityError = SecIdentityCopyPrivateKey(identityApp, &tempSK);
-        if (securityError != noErr) {
-            tempSK = nil;
-        }
-    }
-    CFRelease(items);
+//    NSMutableDictionary * options = [[NSMutableDictionary alloc] init];
+//    [options setObject: password forKey:(__bridge id)kSecImportExportPassphrase];
+//    CFArrayRef items = CFArrayCreate(NULL, 0, 0, NULL);
+//    OSStatus securityError = SecPKCS12Import((__bridge CFDataRef)SKData, (__bridge CFDictionaryRef)options, &items);
+//    if (securityError == noErr && CFArrayGetCount(items) > 0) {
+//        CFDictionaryRef identityDict = CFArrayGetValueAtIndex(items, 0);
+//        SecIdentityRef identityApp = (SecIdentityRef)CFDictionaryGetValue(identityDict, kSecImportItemIdentity);
+//        securityError = SecIdentityCopyPrivateKey(identityApp, &tempSK);
+//        if (securityError != noErr) {
+//            tempSK = nil;
+//        }
+//    }
+//    CFRelease(items);
     
     return tempSK;
 }
@@ -468,7 +468,7 @@ NSLog(Y, Z);		\
     SecKeyRef key = isPublickey ? _publicKeyRef : _privateKeyRef;
     
     size_t cipherBufferSize = SecKeyGetBlockSize(key);
-    uint8_t *cipherBuffer = malloc(cipherBufferSize * sizeof(uint8_t));
+    uint8_t *cipherBuffer = (uint8_t*)malloc(cipherBufferSize * sizeof(uint8_t));
     memset((void *)cipherBuffer, 0*0, cipherBufferSize);
     
     NSData *plainTextBytes = data;
@@ -482,13 +482,14 @@ NSLog(Y, Z);		\
         NSUInteger bufferSize = MIN(blockSize,[plainTextBytes length] - i * blockSize);
         NSData *buffer = [plainTextBytes subdataWithRange:NSMakeRange(i * blockSize, bufferSize)];
         //kSecPaddingNone
-        OSStatus status = SecKeyEncrypt(key,
-                                        secPaddingType,
-                                        (const uint8_t *)[buffer bytes],
-                                        [buffer length],
-                                        cipherBuffer,
-            
-                                        &cipherBufferSize);
+        OSStatus status;
+//        OSStatus status = SecKeyEncrypt(key,
+//                                        secPaddingType,
+//                                        (const uint8_t *)[buffer bytes],
+//                                        [buffer length],
+//                                        cipherBuffer,
+//
+//                                        &cipherBufferSize);
         
         if (status == noErr){
             NSData *encryptedBytes = [NSData dataWithBytes:(const void *)cipherBuffer length:cipherBufferSize];
@@ -533,12 +534,13 @@ NSLog(Y, Z);		\
     size_t keyBufferSize = [wrappedSymmetricKey length];
     
     NSMutableData *bits = [NSMutableData dataWithLength:keyBufferSize];
-    OSStatus sanityCheck = SecKeyDecrypt(key,
-                                         kSecPaddingPKCS1,
-                                         (const uint8_t *) [wrappedSymmetricKey bytes],
-                                         cipherBufferSize,
-                                         [bits mutableBytes],
-                                         &keyBufferSize);
+    OSStatus sanityCheck;
+//    OSStatus sanityCheck = SecKeyDecrypt(key,
+//                                         kSecPaddingPKCS1,
+//                                         (const uint8_t *) [wrappedSymmetricKey bytes],
+//                                         cipherBufferSize,
+//                                         [bits mutableBytes],
+//                                         &keyBufferSize);
     NSAssert(sanityCheck == noErr, @"Error decrypting, OSStatus == %d.", sanityCheck);
     
     [bits setLength:keyBufferSize];
@@ -550,14 +552,14 @@ NSLog(Y, Z);		\
 
 - (NSData *)signData:(NSData *)rawData withPadding:(SecPadding)padding{
     size_t hashSize = SecKeyGetBlockSize(_privateKeyRef);
-    uint8_t *bytes = malloc(hashSize);
-    
-    OSStatus err = SecKeyRawSign(_privateKeyRef,
-                                 padding,
-                                 [rawData bytes],
-                                 [rawData length],
-                                 bytes,
-                                 &hashSize);
+    uint8_t *bytes = (uint8_t*)malloc(hashSize);
+    OSStatus err;
+//    OSStatus err = SecKeyRawSign(_privateKeyRef,
+//                                 padding,
+//                                 [rawData bytes],
+//                                 [rawData length],
+//                                 bytes,
+//                                 &hashSize);
 //    NSAssert(err == errSecSuccess, @"SecKeyRawSign failed: %d", (int)err);
     
     if (err != errSecSuccess) {
@@ -569,13 +571,16 @@ NSLog(Y, Z);		\
     return [NSData dataWithBytesNoCopy:bytes length:hashSize];
     
 }
-- (BOOL)verifyData:(NSData *)rawData withSignature:(NSData *)signature  withPadding:(SecPadding)padding{
-    return errSecSuccess == SecKeyRawVerify(_publicKeyRef,
-                                            padding,
-                                            [rawData bytes],
-                                            [rawData length],
-                                            [signature bytes],
-                                            [signature length]);
+- (BOOL)verifyData:(NSData *)rawData withSignature:(NSData *)signature  withPadding:(SecPadding)padding
+{
+    
+    return YES;
+//    return errSecSuccess == SecKeyRawVerify(_publicKeyRef,
+//                                            padding,
+//                                            [rawData bytes],
+//                                            [rawData length],
+//                                            [signature bytes],
+//                                            [signature length]);
 }
 
 

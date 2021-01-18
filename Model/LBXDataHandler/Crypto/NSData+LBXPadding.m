@@ -146,6 +146,8 @@
             NSLog(@"datalen:%ld",datalen);
             paddingLen = bytes[datalen-1];
             
+//            NSLog(@"%@",self.hexString);
+            
             if (paddingLen >= self.length ) {
                 
                 return nil;

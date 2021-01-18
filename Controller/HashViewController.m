@@ -167,14 +167,21 @@
     
     //除SM3以外，密钥长度不限制，内部算法会自动处理
     NSString *hmacKey = _hmacKey.stringValue;
+    NSData *hmacKeyData = nil;
+
     
     if (_hmacKeyDataType.indexOfSelectedItem == 1) {
-        hmacKey = [hmacKey hexString2Data].utf8String;
+        hmacKeyData = [hmacKey hexString2Data];
     }
     else if (_hmacKeyDataType.indexOfSelectedItem == 2)
     {
-        hmacKey = [hmacKey decodeBase64StringWithOptions:0].utf8String;
+        hmacKeyData = [hmacKey decodeBase64StringWithOptions:0];
     }
+    else
+    {
+        hmacKeyData = hmacKey.utf8Data;
+    }
+    
     
     
     NSData *dst = nil;
@@ -182,38 +189,38 @@
     switch (_popHashType.indexOfSelectedItem) {
         case 0:
             //MD5
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgMD5];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgMD5];
             break;
         case 1:
             //SHA1
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA1];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgSHA1];
             break;
         case 2:
             //SHA2-256
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA256];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgSHA256];
 
             break;
         case 3:
             //SHA2-384
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA384];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgSHA384];
 
             break;
         case 4:
             //SHA2-512
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA512];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgSHA512];
 
             break;
         case 5:
             //SHA3-256
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA3_256];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgSHA3_256];
             break;
         case 6:
             //SHA3-384
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA3_384];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgSHA3_384];
             break;
         case 7:
             //SHA3-512
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSHA3_512];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgSHA3_512];
             break;
         case 8:
             //SM3
@@ -223,7 +230,7 @@
 //                return;
 //            }
 //            dst = [srcString.utf8Data sm3_hmacWithKey:hmacKey];
-            dst = [srcString.utf8Data hmacWithKey:hmacKey.utf8Data algorithm:LBXHmacAlgSM3];
+            dst = [srcString.utf8Data hmacWithKey:hmacKeyData algorithm:LBXHmacAlgSM3];
             break;
             
         default:
