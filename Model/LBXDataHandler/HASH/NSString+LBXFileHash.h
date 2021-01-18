@@ -36,4 +36,13 @@
  */
 - (NSData *)fileSHA256Hash;
 
+
+
+/**
+ *  当前为文件路径，计算文件的SM3，结果32字节
+ *
+ *  @return 文件SM3
+ */
+- (NSData*)fileSM3Hash;
+
 @end

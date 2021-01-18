@@ -9,13 +9,11 @@
 
 #import "NSString+LBXFileHash.h"
 #import <CommonCrypto/CommonDigest.h>
-#import <CommonCrypto/CommonCryptor.h>
 #import <CommonCrypto/CommonHMAC.h>
 
 #import "NSString+LBXConverter.h"
 #import "NSData+LBXConverter.h"
-#import "NSData+LBXCommonCrypto.h"
-
+#import "LBXSM3.h"
 
 #pragma mark - 文件散列函数
 
@@ -109,6 +107,11 @@
     
     return [NSData dataWithBytes:buffer length:CC_SHA1_DIGEST_LENGTH];
     
+}
+
+- (NSData*)fileSM3Hash
+{
+    return [LBXSM3 sm3WithFilePath:self];
 }
 
 @end

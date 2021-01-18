@@ -12,6 +12,7 @@
 
 #import "NSData+LBXCommonCrypto.h"
 #import "NSData+LBXSM3.h"
+#import "LBXSM3.h"
 #import "keccak.h"
 
 
@@ -129,12 +130,12 @@
 
 - (NSData*)sm3
 {
-    return self.SM3;
+    return [LBXSM3 sm3WithData:self];
 }
 
 
-//typedef uint32_t CCHmacAlgorithm;
-//
+
+#pragma mark- 计算hash结果，然后根据hmac原理编写代码计算hmac
 - (NSData*)hmacWithKey:(NSData*)key algorithm:(LBXHmacAlgorithm)alg
 {
     NSData *dataKey = nil;
@@ -299,6 +300,68 @@
 }
 
 
+#pragma mark- 系统提供的hmac调用方式
+- (NSData*)hmacWithKey_sys:(NSData*)key algorithm:(LBXHmacAlgorithm)alg
+{
+    NSInteger digest_len = 0;
+    CCHmacAlgorithm  hmacAlgorithm;
+    unsigned char result[256]={0};
 
+    switch (alg) {
+        case LBXHmacAlgMD5:
+        {
+            hmacAlgorithm = kCCHmacAlgMD5;
+            digest_len = CC_MD5_DIGEST_LENGTH;
+        }
+            break;
+        case LBXHmacAlgSHA1:
+        {
+            hmacAlgorithm = kCCHmacAlgSHA1;
+            digest_len = CC_SHA1_DIGEST_LENGTH;
+
+        }
+            break;
+        case LBXHmacAlgSHA224:
+        {
+            hmacAlgorithm = kCCHmacAlgSHA224;
+            digest_len = CC_SHA224_DIGEST_LENGTH;
+
+        }
+            break;
+        case LBXHmacAlgSHA256:
+        {
+            hmacAlgorithm = kCCHmacAlgSHA256;
+            digest_len = CC_SHA256_DIGEST_LENGTH;
+
+        }
+            break;
+        case LBXHmacAlgSHA384:
+        {
+            hmacAlgorithm = kCCHmacAlgSHA256;
+            digest_len = CC_SHA256_DIGEST_LENGTH;
+
+        }
+            break;
+        case LBXHmacAlgSHA512:
+        {
+            hmacAlgorithm = kCCHmacAlgSHA512;
+            digest_len = CC_SHA512_DIGEST_LENGTH;
+        }
+            break;
+            
+        default:
+        {
+            hmacAlgorithm = kCCHmacAlgMD5;
+            digest_len = CC_MD5_DIGEST_LENGTH;
+        }
+            break;
+    }
+    
+    CCHmac(hmacAlgorithm, [key bytes], key.length, [self bytes], self.length,result);
+    
+    NSData *hmacData = [NSData dataWithBytes:result length:digest_len];
+    return hmacData;
+    
+}
 
 @end

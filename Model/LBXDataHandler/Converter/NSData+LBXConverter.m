@@ -56,7 +56,7 @@
 {
     NSDictionary *jsonObject=[NSJSONSerialization
                               JSONObjectWithData:self
-                              options:NSJSONReadingMutableLeaves
+                              options:kNilOptions
                               error:nil];
     
     return jsonObject;    

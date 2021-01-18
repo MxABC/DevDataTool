@@ -173,7 +173,7 @@
     
     NSDictionary *jsonObject=[NSJSONSerialization
                               JSONObjectWithData:data
-                              options:NSJSONReadingMutableLeaves
+                              options:0
                               error:nil];
     
     return jsonObject;

@@ -45,6 +45,8 @@
 		73D30D9921059213007F5121 /* LBXDataHandler.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 73D30D9821059213007F5121 /* LBXDataHandler.podspec */; };
 		73D30DCA2105CF08007F5121 /* NSDate+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D30DC92105CF08007F5121 /* NSDate+LBXConverter.m */; };
 		8D00AA742574869D006C3956 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D00AA732574869C006C3956 /* libc++.1.tbd */; };
+		8D6B96DE25B557650069D637 /* LBXSM3.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B96DD25B557650069D637 /* LBXSM3.m */; };
+		8D6B96E225B561280069D637 /* NSDictionary+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B96E125B561280069D637 /* NSDictionary+LBXConverter.m */; };
 		CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +124,10 @@
 		73D30DC82105CF08007F5121 /* NSDate+LBXConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+LBXConverter.h"; sourceTree = "<group>"; };
 		73D30DC92105CF08007F5121 /* NSDate+LBXConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LBXConverter.m"; sourceTree = "<group>"; };
 		8D00AA732574869C006C3956 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		8D6B96DC25B557650069D637 /* LBXSM3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXSM3.h; sourceTree = "<group>"; };
+		8D6B96DD25B557650069D637 /* LBXSM3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBXSM3.m; sourceTree = "<group>"; };
+		8D6B96E025B561280069D637 /* NSDictionary+LBXConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LBXConverter.h"; sourceTree = "<group>"; };
+		8D6B96E125B561280069D637 /* NSDictionary+LBXConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LBXConverter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +242,8 @@
 			children = (
 				73C36EE42100374D0095D529 /* NSData+LBXSM3.h */,
 				73C36EE52100374E0095D529 /* NSData+LBXSM3.m */,
+				8D6B96DC25B557650069D637 /* LBXSM3.h */,
+				8D6B96DD25B557650069D637 /* LBXSM3.m */,
 			);
 			path = SM3;
 			sourceTree = "<group>";
@@ -353,6 +361,8 @@
 				73D30D622101BC04007F5121 /* NSString+LBXConverter.m */,
 				73D30DC82105CF08007F5121 /* NSDate+LBXConverter.h */,
 				73D30DC92105CF08007F5121 /* NSDate+LBXConverter.m */,
+				8D6B96E025B561280069D637 /* NSDictionary+LBXConverter.h */,
+				8D6B96E125B561280069D637 /* NSDictionary+LBXConverter.m */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -469,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6B96E225B561280069D637 /* NSDictionary+LBXConverter.m in Sources */,
 				73378A781ED41A4100F8E45F /* ParseCertifiationController.m in Sources */,
 				735C24751EC4547100D604C8 /* NSData+LBXSM4.m in Sources */,
 				734F45831EC2A07400C9E56B /* NSData+LBXCypt.m in Sources */,
@@ -493,6 +504,7 @@
 				734F457B1EC2A05200C9E56B /* keccak.m in Sources */,
 				73D30D692101BC04007F5121 /* NSString+LBXConverter.m in Sources */,
 				73378A731ED414BB00F8E45F /* LBXCertificate.m in Sources */,
+				8D6B96DE25B557650069D637 /* LBXSM3.m in Sources */,
 				739004301EC053B900BBBF77 /* HashViewController.m in Sources */,
 				739004141EC0226400BBBF77 /* AppDelegate.m in Sources */,
 				739004191EC031A600BBBF77 /* Base64ViewController.m in Sources */,
