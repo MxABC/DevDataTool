@@ -289,8 +289,8 @@
                     </popUpButtonCell>
                 </popUpButton>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5KY-2p-b8q">
-                    <rect key="frame" x="548" y="357" width="62" height="18"/>
-                    <buttonCell key="cell" type="check" title="自定义" bezelStyle="regularSquare" imagePosition="left" inset="2" id="83D-zt-hxe">
+                    <rect key="frame" x="548" y="357" width="102" height="18"/>
+                    <buttonCell key="cell" type="check" title="自定义编码表" bezelStyle="regularSquare" imagePosition="left" inset="2" id="83D-zt-hxe">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -330,7 +330,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oRR-PO-G8G">
                     <rect key="frame" x="548" y="325" width="91" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="替换64个字符" id="kyD-oN-Zbd">
-                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -338,7 +338,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qC6-Lo-Aaj">
                     <rect key="frame" x="548" y="173" width="95" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="不足3字节补位" id="Tta-4g-glk">
-                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
