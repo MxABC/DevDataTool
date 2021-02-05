@@ -47,6 +47,7 @@
 		8D00AA742574869D006C3956 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D00AA732574869C006C3956 /* libc++.1.tbd */; };
 		8D6B96DE25B557650069D637 /* LBXSM3.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B96DD25B557650069D637 /* LBXSM3.m */; };
 		8D6B96E225B561280069D637 /* NSDictionary+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B96E125B561280069D637 /* NSDictionary+LBXConverter.m */; };
+		8D90CA4425CD21E3008B9962 /* LBXCustomBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90CA4125CD21E3008B9962 /* LBXCustomBase64.m */; };
 		CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,9 @@
 		8D6B96DD25B557650069D637 /* LBXSM3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBXSM3.m; sourceTree = "<group>"; };
 		8D6B96E025B561280069D637 /* NSDictionary+LBXConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LBXConverter.h"; sourceTree = "<group>"; };
 		8D6B96E125B561280069D637 /* NSDictionary+LBXConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LBXConverter.m"; sourceTree = "<group>"; };
+		8D90CA4125CD21E3008B9962 /* LBXCustomBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXCustomBase64.m; sourceTree = "<group>"; };
+		8D90CA4225CD21E3008B9962 /* LBXCustomDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXCustomDefines.h; sourceTree = "<group>"; };
+		8D90CA4325CD21E3008B9962 /* LBXCustomBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXCustomBase64.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +374,9 @@
 		73D30D632101BC04007F5121 /* Base64 */ = {
 			isa = PBXGroup;
 			children = (
+				8D90CA4325CD21E3008B9962 /* LBXCustomBase64.h */,
+				8D90CA4125CD21E3008B9962 /* LBXCustomBase64.m */,
+				8D90CA4225CD21E3008B9962 /* LBXCustomDefines.h */,
 				73D30D672101BC04007F5121 /* NSData+LBXBase64.h */,
 				73D30D642101BC04007F5121 /* NSData+LBXBase64.m */,
 				73D30D652101BC04007F5121 /* NSString+LBXBase64.h */,
@@ -508,6 +515,7 @@
 				739004301EC053B900BBBF77 /* HashViewController.m in Sources */,
 				739004141EC0226400BBBF77 /* AppDelegate.m in Sources */,
 				739004191EC031A600BBBF77 /* Base64ViewController.m in Sources */,
+				8D90CA4425CD21E3008B9962 /* LBXCustomBase64.m in Sources */,
 				73D30D6A2101BC04007F5121 /* NSData+LBXBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
