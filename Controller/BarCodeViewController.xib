@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="BarCodeViewController">
+            <connections>
+                <outlet property="barImageView" destination="rYS-d8-OVk" id="xf1-um-r3d"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="782" height="615"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rYS-d8-OVk">
+                    <rect key="frame" x="70" y="405" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="PaW-2A-Ygp"/>
+                        <constraint firstAttribute="width" constant="200" id="xbl-xT-M4Y"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="hCX-UK-J0u"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rYS-d8-OVk" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="70" id="180-jJ-k3d"/>
+                <constraint firstItem="rYS-d8-OVk" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="EjA-Vv-PVO"/>
+            </constraints>
+            <point key="canvasLocation" x="83" y="-322.5"/>
+        </customView>
+    </objects>
+</document>

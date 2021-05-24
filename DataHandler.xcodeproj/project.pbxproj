@@ -48,6 +48,8 @@
 		8D6B96DE25B557650069D637 /* LBXSM3.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B96DD25B557650069D637 /* LBXSM3.m */; };
 		8D6B96E225B561280069D637 /* NSDictionary+LBXConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B96E125B561280069D637 /* NSDictionary+LBXConverter.m */; };
 		8D90CA4425CD21E3008B9962 /* LBXCustomBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90CA4125CD21E3008B9962 /* LBXCustomBase64.m */; };
+		8DCA2210265B5067003449F7 /* BarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA220E265B5067003449F7 /* BarCodeViewController.m */; };
+		8DCA2211265B5067003449F7 /* BarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DCA220F265B5067003449F7 /* BarCodeViewController.xib */; };
 		CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +134,9 @@
 		8D90CA4125CD21E3008B9962 /* LBXCustomBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXCustomBase64.m; sourceTree = "<group>"; };
 		8D90CA4225CD21E3008B9962 /* LBXCustomDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXCustomDefines.h; sourceTree = "<group>"; };
 		8D90CA4325CD21E3008B9962 /* LBXCustomBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXCustomBase64.h; sourceTree = "<group>"; };
+		8DCA220D265B5067003449F7 /* BarCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarCodeViewController.h; sourceTree = "<group>"; };
+		8DCA220E265B5067003449F7 /* BarCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarCodeViewController.m; sourceTree = "<group>"; };
+		8DCA220F265B5067003449F7 /* BarCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +333,9 @@
 				73378A751ED41A4100F8E45F /* ParseCertifiationController.h */,
 				73378A761ED41A4100F8E45F /* ParseCertifiationController.m */,
 				73378A771ED41A4100F8E45F /* ParseCertifiationController.xib */,
+				8DCA220D265B5067003449F7 /* BarCodeViewController.h */,
+				8DCA220E265B5067003449F7 /* BarCodeViewController.m */,
+				8DCA220F265B5067003449F7 /* BarCodeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,6 +461,7 @@
 				739004121EC0224A00BBBF77 /* MainMenu.xib in Resources */,
 				739004311EC053B900BBBF77 /* HashViewController.xib in Resources */,
 				73378A791ED41A4100F8E45F /* ParseCertifiationController.xib in Resources */,
+				8DCA2211265B5067003449F7 /* BarCodeViewController.xib in Resources */,
 				73378A661ED3E00E00F8E45F /* WorkingOnItViewController.xib in Resources */,
 				7390041A1EC031A600BBBF77 /* Base64ViewController.xib in Resources */,
 			);
@@ -487,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6B96E225B561280069D637 /* NSDictionary+LBXConverter.m in Sources */,
+				8DCA2210265B5067003449F7 /* BarCodeViewController.m in Sources */,
 				73378A781ED41A4100F8E45F /* ParseCertifiationController.m in Sources */,
 				735C24751EC4547100D604C8 /* NSData+LBXSM4.m in Sources */,
 				734F45831EC2A07400C9E56B /* NSData+LBXCypt.m in Sources */,

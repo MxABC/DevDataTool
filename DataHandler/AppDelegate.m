@@ -16,6 +16,7 @@
 #import "WorkingOnItViewController.h"
 
 #import "Base64ViewController.h"
+#import "BarCodeViewController.h"
 #import "HashViewController.h"
 #import "CryptViewController.h"
 #import "ParseCertifiationController.h"
@@ -35,6 +36,7 @@
 @property (nonatomic, strong) WorkingOnItViewController *workingOnItVC;
 
 @property (nonatomic, strong) Base64ViewController *base64VC;
+@property (nonatomic, strong) BarCodeViewController *barCodeVC;
 @property (nonatomic, strong) HashViewController *hashVC;
 @property (nonatomic, strong) CryptViewController *cryptVC;
 @property (nonatomic, strong) ParseCertifiationController *parseCerVC;
@@ -102,7 +104,8 @@
     NSArray *item1 = @[
                        @{@"title":@"Base64",@"identifer":@"base64"},
                        @{@"title":@"Hex",@"identifer":@"hex"},
-                       @{@"title":@"bit operation",@"identifer":@"bit"}
+                       @{@"title":@"bit operation",@"identifer":@"bit"},
+                       @{@"title":@"BarCode",@"identifer":@"barCode"}
                        ];
     
     //散列函数
@@ -316,6 +319,11 @@
     if (_base64VC) {
         _base64VC.view.hidden = YES;
     }
+    
+    if (_barCodeVC) {
+        _barCodeVC.view.hidden = YES;
+    }
+    
     if (_hashVC) {
         _hashVC.view.hidden = YES;
     }
@@ -355,6 +363,27 @@
     _base64VC.view.hidden = NO;
     
    
+}
+
+- (void)barCode
+{
+    if (!_barCodeVC) {
+        self.barCodeVC = [[BarCodeViewController alloc]init];
+        
+        NSView* superview = [NSApplication sharedApplication].keyWindow.contentView;
+        [superview addSubview:_barCodeVC.view];
+        
+        [_barCodeVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.top.mas_equalTo(superview.mas_top);
+            make.left.equalTo(superview.mas_left).with.offset(200);
+            make.right.equalTo(superview.mas_right);
+            make.bottom.equalTo(superview.mas_bottom);
+        }];
+    }
+    
+    _selectedItemLabel.hidden = YES;
+    _barCodeVC.view.hidden = NO;
 }
 
 #pragma mark --- hash ----
