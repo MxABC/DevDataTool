@@ -9,6 +9,7 @@
 #import "BarCodeViewController.h"
 #import <CoreImage/CoreImage.h>
 #import "NSString+LBXConverter.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface BarCodeViewController ()
 @property (weak) IBOutlet NSImageView *barImageView;

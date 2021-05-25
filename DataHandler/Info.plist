@@ -26,6 +26,8 @@
 	<string>Copyright © 2017年 lbxia20091227@foxmail.com</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>GPS</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

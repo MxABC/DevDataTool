@@ -14,6 +14,7 @@
 #import "NSData+LBXBase64.h"
 #import "LBXCustomBase64.h"
 
+
 @interface Base64ViewController ()
 @property (weak) IBOutlet NSPopUpButton *base64EnOptions;
 @property (weak) IBOutlet NSButton *base64InsertCR;
@@ -57,7 +58,9 @@
     _custom64.string = @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     
 //    _custom64.string = @"efghijklmnopqrstuvwxyz0123456789+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcd";
-
+    
+    
+   
 }
 
 - (void)refreshCustomStatus

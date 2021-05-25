@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GPSConvertViewController">
+            <connections>
+                <outlet property="labeAddress" destination="2qt-FY-zyo" id="8Lr-27-r28"/>
+                <outlet property="latitudeTextField" destination="GL6-H7-7aV" id="vYw-Eh-oC0"/>
+                <outlet property="longtitudeTextField" destination="qdV-ko-UZe" id="KUW-YL-BQt"/>
+                <outlet property="mapType" destination="p5o-RX-FrF" id="BrO-dA-D7G"/>
+                <outlet property="mapView" destination="7Tx-kx-iu8" id="Mwr-Hv-Glc"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="781" height="474"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <mapView mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Tx-kx-iu8">
+                    <rect key="frame" x="0.0" y="0.0" width="781" height="377"/>
+                </mapView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XPE-xb-w74">
+                    <rect key="frame" x="369" y="421" width="114" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Jvu-1d-5SU"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="显示坐标位置" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="J2X-Np-w6l">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" usesAppearanceFont="YES"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="place:" target="-2" id="sUs-c0-QRh"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GL6-H7-7aV">
+                    <rect key="frame" x="31" y="427" width="147" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="147" id="AcF-Mc-UM2"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="纬度" drawsBackground="YES" id="N64-nF-Jcm">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <accessibility description="维度"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qdV-ko-UZe">
+                    <rect key="frame" x="202" y="427" width="147" height="21"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="经度" drawsBackground="YES" id="x5H-et-llk">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WiN-uB-L1M">
+                    <rect key="frame" x="489" y="421" width="142" height="32"/>
+                    <buttonCell key="cell" type="push" title="显示当前定位位置" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6gn-6q-AP2">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" usesAppearanceFont="YES"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="placeCurPos:" target="-2" id="D8I-TA-C5D"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2qt-FY-zyo">
+                    <rect key="frame" x="31" y="387" width="726" height="30"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="地址:" id="kJg-2t-kP3">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p5o-RX-FrF">
+                    <rect key="frame" x="640" y="424" width="78" height="25"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="GYf-J6-Q9u" id="OCH-hv-Tch">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="phS-9b-N8k">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="GYf-J6-Q9u"/>
+                                <menuItem title="Item 2" id="GfK-sv-5mN"/>
+                                <menuItem title="Item 3" id="kyF-1o-mU8"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+            </subviews>
+            <constraints>
+                <constraint firstItem="GL6-H7-7aV" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="31" id="0hB-Xi-ZuE"/>
+                <constraint firstAttribute="bottom" secondItem="7Tx-kx-iu8" secondAttribute="bottom" id="3LC-b2-pR1"/>
+                <constraint firstItem="p5o-RX-FrF" firstAttribute="leading" secondItem="WiN-uB-L1M" secondAttribute="trailing" constant="19" id="3wy-L9-Hbe"/>
+                <constraint firstItem="2qt-FY-zyo" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="33" id="40J-qt-BqI"/>
+                <constraint firstAttribute="trailing" secondItem="7Tx-kx-iu8" secondAttribute="trailing" id="4AC-tJ-xDg"/>
+                <constraint firstItem="7Tx-kx-iu8" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="7sL-rg-SNc"/>
+                <constraint firstItem="WiN-uB-L1M" firstAttribute="leading" secondItem="XPE-xb-w74" secondAttribute="trailing" constant="20" id="BWa-bA-Zyz"/>
+                <constraint firstItem="qdV-ko-UZe" firstAttribute="width" secondItem="GL6-H7-7aV" secondAttribute="width" id="GC9-Ug-1yL"/>
+                <constraint firstItem="7Tx-kx-iu8" firstAttribute="top" secondItem="2qt-FY-zyo" secondAttribute="bottom" constant="10" id="I14-Z5-liJ"/>
+                <constraint firstItem="qdV-ko-UZe" firstAttribute="centerY" secondItem="GL6-H7-7aV" secondAttribute="centerY" id="JNk-Ha-Qe9"/>
+                <constraint firstAttribute="trailing" secondItem="2qt-FY-zyo" secondAttribute="trailing" constant="26" id="JtI-5R-2kU"/>
+                <constraint firstItem="XPE-xb-w74" firstAttribute="leading" secondItem="qdV-ko-UZe" secondAttribute="trailing" constant="27" id="Ns3-WZ-9Vr"/>
+                <constraint firstItem="WiN-uB-L1M" firstAttribute="centerY" secondItem="XPE-xb-w74" secondAttribute="centerY" id="RBJ-OG-cib"/>
+                <constraint firstItem="p5o-RX-FrF" firstAttribute="centerY" secondItem="WiN-uB-L1M" secondAttribute="centerY" id="Yfb-tw-6k1"/>
+                <constraint firstItem="2qt-FY-zyo" firstAttribute="top" secondItem="GL6-H7-7aV" secondAttribute="bottom" constant="10" id="eAM-YF-cl3"/>
+                <constraint firstItem="qdV-ko-UZe" firstAttribute="leading" secondItem="GL6-H7-7aV" secondAttribute="trailing" constant="24" id="geQ-mw-cmP"/>
+                <constraint firstItem="GL6-H7-7aV" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="26" id="kDY-8u-DfP"/>
+                <constraint firstItem="7Tx-kx-iu8" firstAttribute="top" secondItem="GL6-H7-7aV" secondAttribute="bottom" constant="50" id="onr-YU-Sqz"/>
+                <constraint firstItem="XPE-xb-w74" firstAttribute="centerY" secondItem="qdV-ko-UZe" secondAttribute="centerY" id="rYr-Xc-sKi"/>
+            </constraints>
+            <point key="canvasLocation" x="-423" y="145"/>
+        </customView>
+    </objects>
+</document>

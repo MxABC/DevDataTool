@@ -50,6 +50,9 @@
 		8D90CA4425CD21E3008B9962 /* LBXCustomBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90CA4125CD21E3008B9962 /* LBXCustomBase64.m */; };
 		8DCA2210265B5067003449F7 /* BarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA220E265B5067003449F7 /* BarCodeViewController.m */; };
 		8DCA2211265B5067003449F7 /* BarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DCA220F265B5067003449F7 /* BarCodeViewController.xib */; };
+		8DD60860265C9F3E00B5B566 /* GPSConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6085E265C9F3E00B5B566 /* GPSConvertViewController.m */; };
+		8DD60861265C9F3E00B5B566 /* GPSConvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD6085F265C9F3E00B5B566 /* GPSConvertViewController.xib */; };
+		8DD60864265CCB7B00B5B566 /* LocationManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD60863265CCB7B00B5B566 /* LocationManage.m */; };
 		CB05D569528E14427CEC1A35 /* libPods-DataHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EB619C83E18E0B279C67A /* libPods-DataHandler.a */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +140,11 @@
 		8DCA220D265B5067003449F7 /* BarCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarCodeViewController.h; sourceTree = "<group>"; };
 		8DCA220E265B5067003449F7 /* BarCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarCodeViewController.m; sourceTree = "<group>"; };
 		8DCA220F265B5067003449F7 /* BarCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeViewController.xib; sourceTree = "<group>"; };
+		8DD6085D265C9F3E00B5B566 /* GPSConvertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPSConvertViewController.h; sourceTree = "<group>"; };
+		8DD6085E265C9F3E00B5B566 /* GPSConvertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPSConvertViewController.m; sourceTree = "<group>"; };
+		8DD6085F265C9F3E00B5B566 /* GPSConvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPSConvertViewController.xib; sourceTree = "<group>"; };
+		8DD60862265CCB7B00B5B566 /* LocationManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManage.h; sourceTree = "<group>"; };
+		8DD60863265CCB7B00B5B566 /* LocationManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +344,11 @@
 				8DCA220D265B5067003449F7 /* BarCodeViewController.h */,
 				8DCA220E265B5067003449F7 /* BarCodeViewController.m */,
 				8DCA220F265B5067003449F7 /* BarCodeViewController.xib */,
+				8DD6085D265C9F3E00B5B566 /* GPSConvertViewController.h */,
+				8DD6085E265C9F3E00B5B566 /* GPSConvertViewController.m */,
+				8DD6085F265C9F3E00B5B566 /* GPSConvertViewController.xib */,
+				8DD60862265CCB7B00B5B566 /* LocationManage.h */,
+				8DD60863265CCB7B00B5B566 /* LocationManage.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -463,6 +476,7 @@
 				73378A791ED41A4100F8E45F /* ParseCertifiationController.xib in Resources */,
 				8DCA2211265B5067003449F7 /* BarCodeViewController.xib in Resources */,
 				73378A661ED3E00E00F8E45F /* WorkingOnItViewController.xib in Resources */,
+				8DD60861265C9F3E00B5B566 /* GPSConvertViewController.xib in Resources */,
 				7390041A1EC031A600BBBF77 /* Base64ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,11 +534,13 @@
 				73378A741ED414BB00F8E45F /* LBXRSAVendor.mm in Sources */,
 				734F457B1EC2A05200C9E56B /* keccak.m in Sources */,
 				73D30D692101BC04007F5121 /* NSString+LBXConverter.m in Sources */,
+				8DD60864265CCB7B00B5B566 /* LocationManage.m in Sources */,
 				73378A731ED414BB00F8E45F /* LBXCertificate.m in Sources */,
 				8D6B96DE25B557650069D637 /* LBXSM3.m in Sources */,
 				739004301EC053B900BBBF77 /* HashViewController.m in Sources */,
 				739004141EC0226400BBBF77 /* AppDelegate.m in Sources */,
 				739004191EC031A600BBBF77 /* Base64ViewController.m in Sources */,
+				8DD60860265C9F3E00B5B566 /* GPSConvertViewController.m in Sources */,
 				8D90CA4425CD21E3008B9962 /* LBXCustomBase64.m in Sources */,
 				73D30D6A2101BC04007F5121 /* NSData+LBXBase64.m in Sources */,
 			);

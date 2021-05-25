@@ -17,6 +17,7 @@
 
 #import "Base64ViewController.h"
 #import "BarCodeViewController.h"
+#import "GPSConvertViewController.h"
 #import "HashViewController.h"
 #import "CryptViewController.h"
 #import "ParseCertifiationController.h"
@@ -37,6 +38,7 @@
 
 @property (nonatomic, strong) Base64ViewController *base64VC;
 @property (nonatomic, strong) BarCodeViewController *barCodeVC;
+@property (nonatomic, strong) GPSConvertViewController *gpsVC;
 @property (nonatomic, strong) HashViewController *hashVC;
 @property (nonatomic, strong) CryptViewController *cryptVC;
 @property (nonatomic, strong) ParseCertifiationController *parseCerVC;
@@ -105,7 +107,8 @@
                        @{@"title":@"Base64",@"identifer":@"base64"},
                        @{@"title":@"Hex",@"identifer":@"hex"},
                        @{@"title":@"bit operation",@"identifer":@"bit"},
-                       @{@"title":@"BarCode",@"identifer":@"barCode"}
+                       @{@"title":@"BarCode",@"identifer":@"barCode"},
+                       @{@"title":@"GPS",@"identifer":@"GPSVC"}
                        ];
     
     //散列函数
@@ -324,6 +327,10 @@
         _barCodeVC.view.hidden = YES;
     }
     
+    if (_gpsVC) {
+        _gpsVC.view.hidden = YES;
+    }
+    
     if (_hashVC) {
         _hashVC.view.hidden = YES;
     }
@@ -384,6 +391,27 @@
     
     _selectedItemLabel.hidden = YES;
     _barCodeVC.view.hidden = NO;
+}
+
+- (void)GPSVC
+{
+    if (!_gpsVC) {
+        self.gpsVC = [[GPSConvertViewController alloc]init];
+        
+        NSView* superview = [NSApplication sharedApplication].keyWindow.contentView;
+        [superview addSubview:_gpsVC.view];
+        
+        [_gpsVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.top.mas_equalTo(superview.mas_top);
+            make.left.equalTo(superview.mas_left).with.offset(200);
+            make.right.equalTo(superview.mas_right);
+            make.bottom.equalTo(superview.mas_bottom);
+        }];
+    }
+    
+    _selectedItemLabel.hidden = YES;
+    _gpsVC.view.hidden = NO;
 }
 
 #pragma mark --- hash ----
