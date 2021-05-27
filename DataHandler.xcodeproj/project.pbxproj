@@ -50,6 +50,7 @@
 		8D90CA4425CD21E3008B9962 /* LBXCustomBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90CA4125CD21E3008B9962 /* LBXCustomBase64.m */; };
 		8DCA2210265B5067003449F7 /* BarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA220E265B5067003449F7 /* BarCodeViewController.m */; };
 		8DCA2211265B5067003449F7 /* BarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DCA220F265B5067003449F7 /* BarCodeViewController.xib */; };
+		8DCE3DC9265F492B001E8FF0 /* KSCoordinateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE3DC7265F492B001E8FF0 /* KSCoordinateConverter.m */; };
 		8DD60860265C9F3E00B5B566 /* GPSConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6085E265C9F3E00B5B566 /* GPSConvertViewController.m */; };
 		8DD60861265C9F3E00B5B566 /* GPSConvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD6085F265C9F3E00B5B566 /* GPSConvertViewController.xib */; };
 		8DD60864265CCB7B00B5B566 /* LocationManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD60863265CCB7B00B5B566 /* LocationManage.m */; };
@@ -140,6 +141,8 @@
 		8DCA220D265B5067003449F7 /* BarCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarCodeViewController.h; sourceTree = "<group>"; };
 		8DCA220E265B5067003449F7 /* BarCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarCodeViewController.m; sourceTree = "<group>"; };
 		8DCA220F265B5067003449F7 /* BarCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeViewController.xib; sourceTree = "<group>"; };
+		8DCE3DC7265F492B001E8FF0 /* KSCoordinateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCoordinateConverter.m; sourceTree = "<group>"; };
+		8DCE3DC8265F492B001E8FF0 /* KSCoordinateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCoordinateConverter.h; sourceTree = "<group>"; };
 		8DD6085D265C9F3E00B5B566 /* GPSConvertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPSConvertViewController.h; sourceTree = "<group>"; };
 		8DD6085E265C9F3E00B5B566 /* GPSConvertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPSConvertViewController.m; sourceTree = "<group>"; };
 		8DD6085F265C9F3E00B5B566 /* GPSConvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPSConvertViewController.xib; sourceTree = "<group>"; };
@@ -344,6 +347,8 @@
 				8DCA220D265B5067003449F7 /* BarCodeViewController.h */,
 				8DCA220E265B5067003449F7 /* BarCodeViewController.m */,
 				8DCA220F265B5067003449F7 /* BarCodeViewController.xib */,
+				8DCE3DC8265F492B001E8FF0 /* KSCoordinateConverter.h */,
+				8DCE3DC7265F492B001E8FF0 /* KSCoordinateConverter.m */,
 				8DD6085D265C9F3E00B5B566 /* GPSConvertViewController.h */,
 				8DD6085E265C9F3E00B5B566 /* GPSConvertViewController.m */,
 				8DD6085F265C9F3E00B5B566 /* GPSConvertViewController.xib */,
@@ -519,6 +524,7 @@
 				73D30D6B2101BC04007F5121 /* NSString+LBXBase64.m in Sources */,
 				734F458A1EC3176600C9E56B /* CryptViewController.m in Sources */,
 				734F45791EC2A05200C9E56B /* NSData+LBXHash.m in Sources */,
+				8DCE3DC9265F492B001E8FF0 /* KSCoordinateConverter.m in Sources */,
 				73D30DCA2105CF08007F5121 /* NSDate+LBXConverter.m in Sources */,
 				735C24781EC4571E00D604C8 /* sm4.m in Sources */,
 				73D30D682101BC04007F5121 /* NSData+LBXConverter.m in Sources */,

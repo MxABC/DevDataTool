@@ -91,6 +91,14 @@
                         </menu>
                     </popUpButtonCell>
                 </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pVI-GH-Qb0">
+                    <rect key="frame" x="33" y="450" width="31" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="GPS" id="zZP-ae-vdG">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstItem="GL6-H7-7aV" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="31" id="0hB-Xi-ZuE"/>
@@ -107,13 +115,15 @@
                 <constraint firstItem="XPE-xb-w74" firstAttribute="leading" secondItem="qdV-ko-UZe" secondAttribute="trailing" constant="27" id="Ns3-WZ-9Vr"/>
                 <constraint firstItem="WiN-uB-L1M" firstAttribute="centerY" secondItem="XPE-xb-w74" secondAttribute="centerY" id="RBJ-OG-cib"/>
                 <constraint firstItem="p5o-RX-FrF" firstAttribute="centerY" secondItem="WiN-uB-L1M" secondAttribute="centerY" id="Yfb-tw-6k1"/>
+                <constraint firstItem="pVI-GH-Qb0" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="ZHr-WN-SbP"/>
                 <constraint firstItem="2qt-FY-zyo" firstAttribute="top" secondItem="GL6-H7-7aV" secondAttribute="bottom" constant="10" id="eAM-YF-cl3"/>
                 <constraint firstItem="qdV-ko-UZe" firstAttribute="leading" secondItem="GL6-H7-7aV" secondAttribute="trailing" constant="24" id="geQ-mw-cmP"/>
                 <constraint firstItem="GL6-H7-7aV" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="26" id="kDY-8u-DfP"/>
                 <constraint firstItem="7Tx-kx-iu8" firstAttribute="top" secondItem="GL6-H7-7aV" secondAttribute="bottom" constant="50" id="onr-YU-Sqz"/>
                 <constraint firstItem="XPE-xb-w74" firstAttribute="centerY" secondItem="qdV-ko-UZe" secondAttribute="centerY" id="rYr-Xc-sKi"/>
+                <constraint firstItem="pVI-GH-Qb0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="35" id="xpK-4q-a4V"/>
             </constraints>
-            <point key="canvasLocation" x="-423" y="145"/>
+            <point key="canvasLocation" x="50" y="171"/>
         </customView>
     </objects>
 </document>

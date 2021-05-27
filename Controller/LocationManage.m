@@ -57,6 +57,9 @@
         return;
     }
 
+    if ( self.locationManager != nil ) {
+        [self stopGps];
+    }
     
     self.success = success;
     self.fail = fail;

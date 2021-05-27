@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "LocationManage.h"
+#import "KSCoordinateConverter.h"
 
 
 @interface Service_Location_ResposeModel : NSObject
@@ -84,6 +85,8 @@
 @property (weak) IBOutlet NSTextField *labeAddress;
 @property (weak) IBOutlet NSPopUpButton *mapType;
 
+@property (nonatomic, strong) MKCircle *overlay;
+@property (nonatomic, strong) MKPointAnnotation *annotation;
 @end
 
 @implementation GPSConvertViewController
@@ -169,6 +172,9 @@
     
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake([self.latitudeTextField.stringValue doubleValue], [self.longtitudeTextField.stringValue doubleValue]);
     
+    //gps转换火星坐标  https://github.com/skx926/KSCoordinateConverter
+    center = [KSCoordinateConverter marsCoordinateFromGPSCoordinate:center];
+    
     MKCoordinateSpan span =MKCoordinateSpanMake(0.2, 0.2);
 
     
@@ -188,12 +194,23 @@
 
 //    annotation.subtitle = ""
 
+    if (self.annotation) {
+        [self.mapView removeAnnotation:self.annotation];
+    }
     
     [self.mapView addAnnotation:annotation];
+    self.annotation = annotation;
 //
 //    //创建一个新的圆形覆盖物
 
     MKCircle *overlay = [MKCircle circleWithCenterCoordinate:center radius:5000];
+    
+    if (self.overlay) {
+        [self.mapView removeOverlay:self.overlay];
+
+    }
+    
+    self.overlay = overlay;
     
     [self.mapView addOverlay:overlay];
 }
