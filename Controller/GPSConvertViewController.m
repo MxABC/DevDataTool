@@ -87,6 +87,9 @@
 
 @property (nonatomic, strong) MKCircle *overlay;
 @property (nonatomic, strong) MKPointAnnotation *annotation;
+
+@property (nonatomic, strong) CLLocation *currentLocation;
+
 @end
 
 @implementation GPSConvertViewController
@@ -125,17 +128,33 @@
         // 获取当前所在的城市名
         CLGeocoder *geocoder = [[CLGeocoder alloc] init];
         
-        CLLocation *currentLocation = [[CLLocation alloc]initWithLatitude:[self.latitudeTextField.stringValue doubleValue] longitude:[self.longtitudeTextField.stringValue doubleValue]];
+        //需要包含坐标，海拔，精确度等参数转换的地址才更精确
+//        CLLocation *currentLocation = [[CLLocation alloc]initWithCoordinate:CLLocationCoordinate2DMake([self.latitudeTextField.stringValue doubleValue], [self.longtitudeTextField.stringValue doubleValue]) altitude:kCLLocationAccuracyBestForNavigation horizontalAccuracy:kCLLocationAccuracyBestForNavigation verticalAccuracy:kCLLocationAccuracyBestForNavigation timestamp:[NSDate date]];
+        
+        CLLocation *currentLocation = self.currentLocation;
+        
+        if (!currentLocation) {
+            
+        
+//gps坐标转换成实际地址，需要海拔，水平，垂直Accuracy等参数，否则转换的会有些误差，最好是获取的gps值的CLLocation 最准确
+            currentLocation =  [[CLLocation alloc]initWithCoordinate:CLLocationCoordinate2DMake([self.latitudeTextField.stringValue doubleValue], [self.longtitudeTextField.stringValue doubleValue]) altitude:6.52 horizontalAccuracy:65 verticalAccuracy:26.025836944580078 timestamp:[NSDate date]];
+        }
         
         NSLocale *zhLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
         
+//        NSLog(@"convert gps:%lf,%lf",currentLocation.coordinate.latitude,currentLocation.coordinate.longitude);
+//        NSLog(@"convert gps:%@,%@",self.latitudeTextField.stringValue ,self.longtitudeTextField.stringValue);
+
+        
         [geocoder reverseGeocodeLocation:currentLocation preferredLocale:zhLocale completionHandler:^(NSArray<CLPlacemark *> * _Nullable array, NSError * _Nullable error) {
+            
+            self.currentLocation = nil;
             
             if (array.count > 0)
             {
                 CLPlacemark *place = [array objectAtIndex:0];
                 
-                NSLog(@"%@",place.addressDictionary);
+//                NSLog(@"%@",place.addressDictionary);
                 
                 Service_Location_ResposeModel *resModel = [[Service_Location_ResposeModel alloc]init];
                 resModel.country = place.country;
@@ -150,6 +169,7 @@
                 
                 NSString* address =  [resModel address];
 
+                NSLog(@"address:%@",address);
                     
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
@@ -162,14 +182,66 @@
             }
         }];
     }
-    
+}
+
+- (void)convertToAddressWith:(CLLocation*)currentLocation
+{
+    if (@available(macOS 10.13, *))
+    {
+        // 获取当前所在的城市名
+        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+                
+        NSLocale *zhLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+        
+        NSLog(@"convert gps:%lf,%lf",currentLocation.coordinate.latitude,currentLocation.coordinate.longitude);
+        
+        self.currentLocation = currentLocation;
+        
+        [geocoder reverseGeocodeLocation:currentLocation preferredLocale:zhLocale completionHandler:^(NSArray<CLPlacemark *> * _Nullable array, NSError * _Nullable error) {
+            
+            if (array.count > 0)
+            {
+                CLPlacemark *place = [array objectAtIndex:0];
+                
+//                NSLog(@"%@",place.addressDictionary);
+                
+                Service_Location_ResposeModel *resModel = [[Service_Location_ResposeModel alloc]init];
+                resModel.country = place.country;
+                resModel.province = place.administrativeArea;
+                
+                resModel.locality = place.locality;//市
+                resModel.subLocality = place.subLocality;//区
+                
+                resModel.thoroughfare = place.thoroughfare;//路
+                resModel.subThoroughfare = place.subThoroughfare;//子路
+                resModel.name = place.name;//名称，可能和thoroughfare或subThoroughfare名字一样
+                
+                NSString* address =  [resModel address];
+
+                NSLog(@"address:%@",address);
+                    
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    self.labeAddress.stringValue = address;
+                });
+            }
+            else
+            {
+                
+            }
+        }];
+    }
 }
 
 - (IBAction)place:(id)sender {
     
-    
     [self convertToAddress];
-    
+  
+    [self placeAction];
+}
+
+- (void)placeAction
+{
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake([self.latitudeTextField.stringValue doubleValue], [self.longtitudeTextField.stringValue doubleValue]);
     
     //gps转换火星坐标  https://github.com/skx926/KSCoordinateConverter
@@ -207,7 +279,6 @@
     
     if (self.overlay) {
         [self.mapView removeOverlay:self.overlay];
-
     }
     
     self.overlay = overlay;
@@ -220,10 +291,9 @@
     NSNumber *dn_lati = [NSNumber numberWithDouble:latitidue];
     NSNumber *dn_longti = [NSNumber numberWithDouble:longtitude];
 
-    
     self.latitudeTextField.stringValue = [dn_lati stringValue];
     self.longtitudeTextField.stringValue = [dn_longti stringValue];
-    
+
     [self place:nil];
 }
 
@@ -235,9 +305,13 @@
             
             CLLocationCoordinate2D coordinate = [currentLocation coordinate];
             
+            self.currentLocation = currentLocation;
+            
             //mapview采用的高德地图，GPS坐标系与高德地图坐标系不一致，显示的和苹果电脑定位位置有出入
             //https://blog.csdn.net/gudufuyun/article/details/106738942
             [self placeWithLatitude:coordinate.latitude longtitude:coordinate.longitude];
+            
+//            [self convertToAddressWith:currentLocation];
         });
         
     } fail:^(NSError *error) {
